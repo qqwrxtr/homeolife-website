@@ -7,8 +7,12 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "i18next": "^22.5.1",
+    "i18next-browser-languagedetector": "^8.0.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-i18next": "^12.3.1",
+    "react-router-dom": "^7.5.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -35,5 +39,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "typescript": "4.9.5"
+  },
+  "overrides": {
+    "i18next": {
+      "typescript": "4.9.5"
+    },
+    "react-i18next": {
+      "typescript": "4.9.5"
+    }
   }
 }
