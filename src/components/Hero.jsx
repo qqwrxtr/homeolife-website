@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import HeroVideo from '../assets/hero.mp4';
-import ConsultModal from './Modals/Consulte.jsx';
+import ConsultModal from './modals/consulte.jsx';
 
 const HeroSection = () => {
   const { t } = useTranslation();
