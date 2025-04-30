@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import Doctor from '../assets/doctor.png';
-import ConsultModal from './modals/Consulte';
+import ConsultModal from './Modals/Consulte.jsx';
 
 const AboutSection = () => {
   const { t } = useTranslation();

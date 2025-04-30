@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import bgimage from '../assets/123.avif';
-import plantIcon from '../assets/doctor.png'; // ← replace with your actual SVGs if needed
 
 const HomeopathyBenefitsTable = () => {
   const { t } = useTranslation();
