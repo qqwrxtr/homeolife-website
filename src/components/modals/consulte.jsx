@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const ConsultModal = ({ isOpen, onClose }) => {
+const Consulte = ({ isOpen, onClose }) => {
   const { t } = useTranslation();
   
   // Prevent scrolling when modal is open
@@ -135,4 +135,4 @@ const ConsultModal = ({ isOpen, onClose }) => {
   );
 };
 
-export default ConsultModal;
+export default Consulte;
