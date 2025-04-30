@@ -8,30 +8,33 @@ import translationsInRussian from './language/ru.json';
 import translationsInUkrainian from './language/ua.json';
 
 const resources = {
-  ru: {
-    translation: translationsInRussian,
-  },
   ua: {
     translation: translationsInUkrainian,
   },
+  ru: {
+    translation: translationsInRussian,
+  }
 };
 
 i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    resources,
-    fallbackLng: "ru",
-    debug: true, // Set to false in production
-    interpolation: {
-      escapeValue: false,
-    },
-    detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
-    },
-    ns: "translation",
-    defaultNS: "translation",
-  });
+.use(initReactI18next)
+.init({
+  resources,
+  fallbackLng: "ua",
+  load: "languageOnly",
+  supportedLngs: ['ua', 'ru'],
+  debug: true,
+  interpolation: { escapeValue: false },
+  detection: {
+    order: ['localStorage', 'navigator', 'htmlTag'],
+    caches: ['localStorage'],
+  },
+  load: 'languageOnly',
+  fallbackLng: 'ua',
+
+  ns: "translation",
+  defaultNS: "translation",
+});
+
 
 export default i18n;

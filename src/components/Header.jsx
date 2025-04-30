@@ -65,7 +65,7 @@ const Header = () => {
   return (
     <header 
       className={`w-full shadow-md bg-white/95 backdrop-blur-sm sticky top-0 z-[999] transition-all duration-300 ease-in-out
-        ${isScrolled ? 'py-1 md:py-2' : 'py-2 md:py-4'}`}
+        ${isScrolled ? 'py-1 md:py-2' : 'py-1 md:py-2'}`}
     >
       {/* Logo and Main Navigation */}
       <div className="xl:container mx-auto px-3 sm:px-4">
@@ -98,12 +98,13 @@ const Header = () => {
                 </a>
               </li>
               <li ref={dropdownRef} className="relative group">
-                <button 
+                <a 
                   className="text-slate-700 hover:text-slate-900 transition-colors duration-300 pb-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-500 after:transition-all after:duration-300 group-hover:after:w-full flex items-center cursor-pointer"
                   onMouseEnter={() => setIsDropdownOpen(true)}
                   onClick={toggleDropdown}
                   aria-expanded={isDropdownOpen}
                   aria-haspopup="true"
+                  href="/usefulInfo"
                 >
                   {t('navigation.usefulInfo')}
                   <svg 
@@ -115,7 +116,7 @@ const Header = () => {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
-                </button>
+                </a>
                 
                 {/* Desktop Dropdown - Shows on hover or click */}
                 <div 

@@ -1,18 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import CombinedHeroAbout from './components/CombineHeroAbout';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import AboutSection from './components/AboutSection';
-import './i18n';
+
 import HomeopathyBenefitsTable from './components/HomeopathyBenefitsTable';
+import './i18n';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Hero />
-      <AboutSection />
-      <HomeopathyBenefitsTable/>
+      <CombinedHeroAbout/>
+      <HomeopathyBenefitsTable />
     </div>
   );
 }
