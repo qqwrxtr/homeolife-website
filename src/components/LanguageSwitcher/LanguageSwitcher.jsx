@@ -1,104 +1,56 @@
-import { useState, useEffect } from 'react';
+// src/components/LanguageSwitcher/LanguageSwitcher.jsx
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const LanguageSwitcher = () => {
-  const { i18n, t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
-  
-  // Set default language to Russian on component mount if not already set
+  const { i18n } = useTranslation();
+  const [isHovered, setIsHovered] = useState(false);
+
+  // On mount, ensure language is set (fallback to 'ru')
   useEffect(() => {
-    const currentLang = localStorage.getItem('i18nextLng') || 'ru';
-    if (i18n.language !== currentLang) {
-      i18n.changeLanguage(currentLang);
+    const storedLang = localStorage.getItem('i18nextLng') || 'ru';
+    if (i18n.language !== storedLang) {
+      i18n.changeLanguage(storedLang);
     }
   }, [i18n]);
-  
-  // Get current language with a fallback to Russian
+
   const currentLang = i18n.language?.substring(0, 2) || 'ru';
-  
-  // Toggle dropdown visibility
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+
+  const changeLanguage = (lang) => {
+    if (lang === currentLang) return;
+    i18n.changeLanguage(lang);
+    localStorage.setItem('i18nextLng', lang);
   };
-  
-  // Handle language change
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-    localStorage.setItem('i18nextLng', language);
-    setIsOpen(false);
-  };
-  
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!event.target.closest('.language-switcher')) {
-        setIsOpen(false);
-      }
-    };
-    
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-  
-  const getFlagEmoji = (countryCode) => {
-    const codePoints = countryCode
-      .toUpperCase()
-      .split('')
-      .map(char => 127397 + char.charCodePoint());
-    return String.fromCodePoint(...codePoints);
-  };
-  
+
   return (
-    <div className="language-switcher relative">
-      <button 
-        onClick={toggleDropdown}
-        className="flex items-center space-x-1 py-1 px-2 rounded-md hover:bg-gray-100 transition-colors duration-300"
-        aria-label="Сменить язык"
+    <div 
+      className="language-switcher flex items-center bg-slate-50/50 rounded-md px-1 py-0.5 border border-slate-100 transition-all duration-300 hover:shadow-sm"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <button
+        onClick={() => changeLanguage('ru')}
+        className={`py-0.5 sm:py-1 px-1.5 sm:px-2 text-xs sm:text-sm font-medium rounded-sm transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-teal-400
+          ${currentLang === 'ru'
+            ? 'text-slate-900 bg-white shadow-sm border-b-2 border-teal-500'
+            : 'text-slate-600 hover:text-teal-700 hover:cursor-pointer'}`}
+        aria-label="Русский"
       >
-        <span className="font-medium text-gray-700">
-          {currentLang === 'ru' ? 'Русский' : 'Украинский'}
-        </span>
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          className={`h-4 w-4 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
-          fill="none" 
-          viewBox="0 0 24 24" 
-          stroke="currentColor"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
+        RU
       </button>
-      
-      {isOpen && (
-        <div className="absolute right-0 mt-1 bg-white rounded-md shadow-lg py-1 min-w-[120px] z-50 border border-gray-200">
-          <button 
-            className={`w-full text-left px-4 py-2 flex items-center space-x-2 ${currentLang === 'ru' ? 'bg-green-50 text-green-700' : 'hover:bg-gray-50'}`}
-            onClick={() => changeLanguage('ru')}
-          >
-            <span className="text-lg">🇷🇺</span>
-            <span>Русский</span>
-            {currentLang === 'ru' && (
-              <svg className="ml-auto h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-            )}
-          </button>
-          <button 
-            className={`w-full text-left px-4 py-2 flex items-center space-x-2 ${currentLang === 'ua' ? 'bg-green-50 text-green-700' : 'hover:bg-gray-50'}`}
-            onClick={() => changeLanguage('ua')}
-          >
-            <span className="text-lg">🇺🇦</span>
-            <span>Украинский</span>
-            {currentLang === 'ua' && (
-              <svg className="ml-auto h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-            )}
-          </button>
-        </div>
-      )}
+
+      <span className="mx-0.5 sm:mx-1 text-slate-300 select-none w-1 h-full">|</span>
+
+      <button
+        onClick={() => changeLanguage('ua')}
+        className={`py-0.5 sm:py-1 px-1.5 sm:px-2 text-xs sm:text-sm font-medium rounded-sm transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-teal-400
+          ${currentLang === 'ua'
+            ? 'text-slate-900 bg-white shadow-sm border-b-2 border-teal-500'
+            : 'text-slate-600 hover:text-teal-700 hover:cursor-pointer'}`}
+        aria-label="Украинский"
+      >
+        UA
+      </button>
     </div>
   );
 };

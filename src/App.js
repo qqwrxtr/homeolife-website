@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
 import './i18n';
+import HomeopathyBenefitsTable from './components/HomeopathyBenefitsTable';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Hero />
       <AboutSection />
+      <HomeopathyBenefitsTable/>
     </div>
   );
 }
