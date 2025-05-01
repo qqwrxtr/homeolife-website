@@ -30,6 +30,19 @@ const CombinedHeroAbout = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  
+  // Smooth scroll function using the ref directly - no hash/ID needed
+  const scrollToAboutSection = () => {
+    if (aboutSectionRef.current) {
+      const yOffset = -20; // Optional offset to adjust final scroll position
+      const y = aboutSectionRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   useEffect(() => {
     // Animate hero content on load
@@ -87,28 +100,30 @@ const CombinedHeroAbout = () => {
         {/* Hero Section - Video only appears within this container */}
         <div className="relative flex items-center justify-center w-full h-screen max-h-[700px] min-h-[500px] 2xl:min-h-[600px] overflow-hidden z-10">
           {/* Video Container - Fixed position but with display control */}
-          <div className="absolute inset-0 w-full h-full flex justify-center overflow-hidden">
-            {/* Professional overlay with subdued gradient */}
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/10 via-slate-800/60 to-slate-900/25 z-10 max-w-[90vw] mx-auto"></div>
-            <video 
-              ref={videoRef}
-              className="absolute inset-0 object-cover max-w-[90vw] mx-auto"
-              style={{ 
-                position: 'fixed',
-                height: '100%'
-              }}
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              controls={false}
-            >
-              <source src={HeroVideo} type="video/mp4" />
-            </video>
+          <div className="absolute inset-0 flex justify-center overflow-hidden">
+            <div className="w-full max-w-[90vw] h-full mx-auto relative">
+              <video 
+                ref={videoRef}
+                className="absolute inset-0 object-cover mx-auto"
+                style={{ 
+                  position: 'fixed',
+                  height: '100%',
+                  width: '100%',
+                  maxWidth: '90vw'
+                }}
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                controls={false}
+              >
+                <source src={HeroVideo} type="video/mp4" />
+              </video>
+            </div>
           </div>
           
           {/* Hero Content Container */}
-          <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8 max-w-[90vw] mx-auto">
             {/* Content Wrapper with Animation */}
             <div className={`transition-all duration-700 transform ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               {/* Headline with subtle separator */}
@@ -147,9 +162,12 @@ const CombinedHeroAbout = () => {
               </div>
             </div>
             
-            {/* Subtle scroll indicator */}
+            {/* Smooth Scroll Arrow with onClick handler - no href */}
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block">
-              <div className="cursor-pointer text-white/60 hover:text-white/90 transition-colors duration-300 animate-bounce">
+              <div 
+                onClick={scrollToAboutSection}
+                className="cursor-pointer text-white/60 hover:text-white/90 transition-colors duration-300 animate-bounce"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-8 w-8"
@@ -166,13 +184,13 @@ const CombinedHeroAbout = () => {
         </div>
       </div>
       
-      {/* About Section */}
+      {/* About Section - no ID needed */}
       <section 
         ref={aboutSectionRef}
         className="relative py-16 md:py-24 bg-[#bcc9ab] w-full z-10"
       >
-        <div className="container mx-auto px-4 sm:px-6 bg-white">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 py-6">
+        <div className="container mx-auto px-4 sm:px-6 bg-white max-w-[90vw]">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 py-6 ">
             {/* Image Column */}
             <div className="lg:w-2/5 relative">
               <div 

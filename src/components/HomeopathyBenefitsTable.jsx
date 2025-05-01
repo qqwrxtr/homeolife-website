@@ -31,143 +31,122 @@ const HomeopathyBenefitsTable = () => {
   }, []);
 
   return (
-    <>
-      {/* Title Section - Completely separate from the parallax section */}
-      <div className="container mx-auto px-4 py-16 text-center">
-        <h2 className="text-3xl md:text-4xl font-medium text-slate-800 mb-2">
-          {t('benefits.title')}
-        </h2>
-        <p className="text-slate-600 text-base italic mb-6">
-          {t('benefits.subtitle')}
-        </p>
-        <div className="flex justify-center mt-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8 text-slate-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </div>
-      </div>
-
-      {/* Parallax Table Section - Completely separate */}
-      <section
-        ref={sectionRef}
-        className="relative py-16 md:py-32 bg-white"
-        style={{ position: 'relative', overflow: 'hidden' }}
-      >
-        {/* Background with parallax - Only applies to the table */}
-        <div
-          ref={bgRef}
-          className="absolute inset-0 mx-24"
-          style={{
-            backgroundImage: `url(${bgimage})`,
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            height: '120%',
-            top: '-10%',
-            willChange: 'transform',
-          }}
-        />
-
-        {/* Table Section */}
-        <div className="container mx-auto px-4 relative">
-          {/* white card */}
-          <div className="mx-auto max-w-7xl bg-white border border-slate-200 shadow-lg overflow-hidden px-6 py-10">
-            {/* 3×3 grid with dividing lines */}
-            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-200">
-              <div className="p-6 flex flex-col items-start border border-black">
-                <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                  {t('benefits.individuality.title')}
-                </h3>
-                <p className="text-slate-600 text-sm text-start">
-                  {t('benefits.individuality.description')}
-                </p>
-              </div>
-              <div className="p-6 flex flex-col items-start border border-black">
-                <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                  {t('benefits.safety.title')}
-                </h3>
-                <p className="text-slate-600 text-sm text-start">
-                  {t('benefits.safety.description')}
-                </p>
-              </div>
-              <div className="p-6 flex flex-col items-start border border-black">
-                <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                  {t('benefits.naturalRecovery.title')}
-                </h3>
-                <p className="text-slate-600 text-sm text-start">
-                  {t('benefits.naturalRecovery.description')}
-                </p>
-              </div>
-
-              <div className="p-6 flex flex-col items-start border border-black">
-                <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                  {t('benefits.gentleAction.title')}
-                </h3>
-                <p className="text-slate-600 text-sm text-start">
-                  {t('benefits.gentleAction.description')}
-                </p>
-              </div>
-
-              <div className="p-6 flex flex-col items-start border border-black">
-                <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                  {t('benefits.compatible.title')}
-                </h3>
-                <p className="text-slate-600 text-sm text-start">
-                  {t('benefits.compatible.description')}
-                </p>
-              </div>
-
-              <div className="p-6 flex flex-col items-start border border-black">
-                <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                  {t('benefits.chronicConditions.title')}
-                </h3>
-                <p className="text-slate-600 text-sm text-start">
-                  {t('benefits.chronicConditions.description')}
-                </p>
-              </div>
-
-              <div className="p-6 flex flex-col items-start border border-black">
-                <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                  {t('benefits.deepLevel.title')}
-                </h3>
-                <p className="text-slate-600 text-sm text-start">
-                  {t('benefits.deepLevel.description')}
-                </p>
-              </div>
-
-              <div className="p-6 flex flex-col items-start border border-black">
-                <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                  {t('benefits.stableMethod.title')}
-                </h3>
-                <p className="text-slate-600 text-sm text-start">
-                  {t('benefits.stableMethod.description')}
-                </p>
-              </div>
-
-              <div className="p-6 flex flex-col items-start border border-black">
-                <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                  {t('benefits.familySupport.title')}
-                </h3>
-                <p className="text-slate-600 text-sm text-start">
-                  {t('benefits.familySupport.description')}
-                </p>
+    <section className='w-full flex justify-center'>
+      <div className="max-w-[90vw] w-full">
+        {/* Title Section - Completely separate from the parallax section */}
+        <div className="mx-auto px-4 pt-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-medium text-slate-800 mb-2">
+            {t('benefits.title')}
+          </h2>
+          <p className="text-slate-600 text-base italic mb-2">
+            {t('benefits.subtitle')}
+          </p>
+          <div className="flex justify-center mt-6">
+          <div>
+              <div className="cursor-pointer transition-colors duration-300 animate-bounce">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
+                </svg>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </>
+
+        {/* Parallax Table Section - Completely separate */}
+        <section
+          ref={sectionRef}
+          className="relative py-16 md:py-64 bg-white"
+          style={{ position: 'relative', overflow: 'hidden' }}
+        >
+          {/* Background with parallax - Only applies to the table */}
+          <div
+            ref={bgRef}
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${bgimage})`,
+              backgroundSize: 'contain',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              height: '130%',
+              top: '-10%',
+              willChange: 'transform',
+              maxWidth: '90vw',
+              margin: '0 auto',
+              left: '0',
+              right: '0'
+            }}
+          />
+
+          {/* Table Section */}
+          <div className="container mx-auto px-4 relative">
+            {/* white card */}
+            <div className="mx-auto bg-white border border-slate-200 shadow-lg overflow-hidden px-6 py-10">
+              {/* 3×3 grid with dividing lines */}
+              <div className="grid grid-cols-1 md:grid-cols-3">
+                <div className="p-6 flex flex-col items-start md:border-t md:border-l md:border-r-0 border-t border-l border-r border-slate-400">
+                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
+                    {t('benefits.individuality.title')}
+                  </h3>
+                  <p className="text-slate-600 text-sm text-start">
+                    {t('benefits.individuality.description')}
+                  </p>
+                </div>
+                <div className="p-6 flex flex-col items-start md:border-t md:border-l border-t md:border-r-0 border-t border-l border-r border-slate-400">
+                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
+                    {t('benefits.safety.title')}
+                  </h3>
+                  <p className="text-slate-600 text-sm text-start">
+                    {t('benefits.safety.description')}.{t('benefits.familySupport.description')}
+                  </p>
+                </div>
+                <div className="p-6 flex flex-col items-start border-t border-l border-r border-slate-400">
+                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
+                    {t('benefits.naturalRecovery.title')}
+                  </h3>
+                  <p className="text-slate-600 text-sm text-start">
+                    {t('benefits.naturalRecovery.description')}
+                  </p>
+                </div>
+
+                <div className="p-6 flex flex-col items-start border-t border-l md:border-r-0 border-r border-b border-slate-400">
+                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
+                    {t('benefits.gentleAction.title')}
+                  </h3>
+                  <p className="text-slate-600 text-sm text-start">
+                    {t('benefits.gentleAction.description')}.{t('benefits.deepLevel.description')}
+                  </p>
+                </div>
+
+                <div className="p-6 flex flex-col items-start md:border-t border-l md:border-r-0 border-r border-b border-slate-400">
+                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
+                    {t('benefits.chronicConditions.title')}
+                  </h3>
+                  <p className="text-slate-600 text-sm text-start">
+                    {t('benefits.chronicConditions.description')}.{t('benefits.compatible.description')}
+                  </p>
+                </div>
+
+                <div className="p-6 flex flex-col items-start border-x border-b md:border border-slate-400">
+                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
+                    {t('benefits.stableMethod.title')}
+                  </h3>
+                  <p className="text-slate-600 text-sm text-start">
+                    {t('benefits.stableMethod.description')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
   );
 };
 
