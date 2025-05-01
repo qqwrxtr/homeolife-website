@@ -120,7 +120,7 @@ const Header = () => {
                 
                 {/* Desktop Dropdown - Shows on hover or click */}
                 <div 
-                  className={`absolute left-0 mt-1 rounded-md shadow-lg bg-white ring-1 ring-slate-200 transition-all duration-200 z-[999] w-44 sm:w-48 md:w-52 ${
+                  className={`absolute left-0 mt-1 rounded-md shadow-lg bg-white ring-1 ring-slate-200 transition-all duration-200 z-[999] w-full ${
                     isDropdownOpen ? 'opacity-100 transform translate-y-0 visible' : 'opacity-0 invisible transform -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto'
                   }`}
                   onMouseLeave={() => setIsDropdownOpen(false)}
