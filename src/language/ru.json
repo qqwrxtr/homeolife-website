@@ -137,7 +137,9 @@
     }
   },
   "testimonialsText":{
-    "testimonials" : "Отзывы"
+    "testimonials" : "Отзывы",
+    "prevTestimonial" : "Предыдущий отзыв",
+    "nextTestimonial" : "Следуйший отзыв"
   },
   "testimonials": [
     {

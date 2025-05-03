@@ -71,7 +71,7 @@ const TestimonialsPreview = () => {
           <button
             onClick={goToPrev}
             className="absolute top-1/2 left-0 -translate-y-1/2 w-8 h-8 text-slate-400 hover:text-slate-600 transition-colors duration-300 focus:outline-none z-20"
-            aria-label={t('prevTestimonial', 'Previous testimonial')}
+            aria-label={t('testimonialsText.prevTestimonial', 'Previous testimonial')}
           >
             {/* left arrow svg */}
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -83,7 +83,7 @@ const TestimonialsPreview = () => {
           <button
             onClick={goToNext}
             className="absolute top-1/2 right-0 -translate-y-1/2 w-8 h-8 text-slate-400 hover:text-slate-600 transition-colors duration-300 focus:outline-none z-20"
-            aria-label={t('nextTestimonial', 'Next testimonial')}
+            aria-label={t('testimonialsText.nextTestimonial', 'Next testimonial')}
           >
             {/* right arrow svg */}
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -130,7 +130,6 @@ const TestimonialsPreview = () => {
                     ? 'bg-slate-400'
                     : 'bg-slate-200'
               }`}
-              aria-label={t('goToTestimonial', `Go to testimonial ${idx + 1}`)}
             />
           ))}
         </div>

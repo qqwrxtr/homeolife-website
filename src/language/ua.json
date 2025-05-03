@@ -140,7 +140,9 @@
     }
   },
   "testimonialsText":{
-    "testimonials" : "Відгуки"
+    "testimonials" : "Відгуки",
+    "prevTestimonial" : "Попередній відгук",
+    "nextTestimonial" : "Наступний відгук"
   },
   "testimonials": [
     {
