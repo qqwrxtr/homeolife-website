@@ -77,7 +77,7 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <section className="bg-white py-16 md:py-24 w-full">
+    <section className="bg-white py-16 md:py-24 w-full" id='contacts'>
       <div className="container mx-auto px-4 sm:px-6 max-w-[90vw]">
         <div 
           ref={formRef}
