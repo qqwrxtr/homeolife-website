@@ -71,13 +71,13 @@ const HomeopathyBenefitsTable = () => {
             className="absolute inset-0"
             style={{
               backgroundImage: `url(${bgimage})`,
-              backgroundSize: 'contain',
+              backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
-              height: '130%',
+              height: '1200px',
               top: '-10%',
               willChange: 'transform',
-              maxWidth: '90vw',
+              window: '90vw',
               margin: '0 auto',
               left: '0',
               right: '0'
@@ -88,57 +88,65 @@ const HomeopathyBenefitsTable = () => {
           <div className="container mx-auto px-4 relative">
             {/* white card */}
             <div className="mx-auto bg-white border border-slate-200 shadow-lg overflow-hidden px-6 py-10">
-              {/* 3×3 grid with dividing lines */}
+              {/* Modified grid layout - 3×2 with one larger cell */}
               <div className="grid grid-cols-1 md:grid-cols-3">
+                {/* Top row - 3 equal cells */}
                 <div className="p-6 flex flex-col items-start md:border-t md:border-l md:border-r-0 border-t border-l border-r border-slate-400">
-                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                    {t('benefits.individuality.title')}
-                  </h3>
+                  <div className="flex items-start mb-3">
+                    
+                    <h3 className="text-lg font-medium text-slate-800">
+                      {t('benefits.individuality.title')}
+                    </h3>
+                  </div>
                   <p className="text-slate-600 text-sm text-start">
                     {t('benefits.individuality.description')}
                   </p>
                 </div>
                 <div className="p-6 flex flex-col items-start md:border-t md:border-l border-t md:border-r-0 border-t border-l border-r border-slate-400">
-                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                    {t('benefits.safety.title')}
-                  </h3>
+                  <div className="flex items-start mb-3">
+                    
+                    <h3 className="text-lg font-medium text-slate-800">
+                      {t('benefits.safety.title')}
+                    </h3>
+                  </div>
                   <p className="text-slate-600 text-sm text-start">
                     {t('benefits.safety.description')}.{t('benefits.familySupport.description')}
                   </p>
                 </div>
                 <div className="p-6 flex flex-col items-start border-t border-l border-r border-slate-400">
-                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                    {t('benefits.naturalRecovery.title')}
-                  </h3>
+                  <div className="flex items-start mb-3">
+                    
+                    <h3 className="text-lg font-medium text-slate-800">
+                      {t('benefits.naturalRecovery.title')}
+                    </h3>
+                  </div>
                   <p className="text-slate-600 text-sm text-start">
                     {t('benefits.naturalRecovery.description')}
                   </p>
                 </div>
 
-                <div className="p-6 flex flex-col items-start border-t border-l md:border-r-0 border-r border-b border-slate-400">
-                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                    {t('benefits.gentleAction.title')}
-                  </h3>
+                {/* Bottom row - 2 cells: 2 regular columns and 1 larger column */}
+                <div className="p-6 flex flex-col items-start border-t border-l md:border-r-0 border-r border-b border-slate-400 md:col-span-2">
+                  <div className="flex items-start mb-3">
+                    
+                    <h3 className="text-lg font-medium text-slate-800">
+                      {t('benefits.gentleAction.title')}
+                    </h3>
+                  </div>
                   <p className="text-slate-600 text-sm text-start">
                     {t('benefits.gentleAction.description')}.{t('benefits.deepLevel.description')}
                   </p>
                 </div>
 
-                <div className="p-6 flex flex-col items-start md:border-t border-l md:border-r-0 border-r border-b border-slate-400">
-                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                    {t('benefits.chronicConditions.title')}
-                  </h3>
+                <div className="p-6 flex flex-col items-start border-x border-b border-slate-400">
+                  <div className="flex items-start mb-3">
+                    
+                    <h3 className="text-lg font-medium text-slate-800">
+                      {t('benefits.chronicConditions.title')}
+                    </h3>
+                  </div>
                   <p className="text-slate-600 text-sm text-start">
                     {t('benefits.chronicConditions.description')}.{t('benefits.compatible.description')}
-                  </p>
-                </div>
-
-                <div className="p-6 flex flex-col items-start border-x border-b md:border border-slate-400">
-                  <h3 className="text-lg font-medium text-slate-800 mb-2 text-start">
-                    {t('benefits.stableMethod.title')}
-                  </h3>
-                  <p className="text-slate-600 text-sm text-start">
-                    {t('benefits.stableMethod.description')}
                   </p>
                 </div>
               </div>
