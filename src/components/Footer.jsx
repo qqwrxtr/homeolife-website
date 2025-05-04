@@ -75,7 +75,7 @@ const Footer = () => {
 
               {/* Email */}
               <a
-                href="mailto:korkachanna88@gmail.com"
+                href="mailto:homeolifeua@gmail.com"
                 className="text-slate-600 hover:text-teal-600 transition-colors duration-300"
                 aria-label="Email"
               >
@@ -205,8 +205,8 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-teal-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:korkachanna88@gmail.com" className="text-slate-600 hover:text-teal-600 transition-colors duration-300 text-sm">
-                  korkachanna88@gmail.com
+                <a href="mailto:homeolifeua@gmail.com" className="text-slate-600 hover:text-teal-600 transition-colors duration-300 text-sm">
+                  homeolifeua@gmail.com
                 </a>
               </li>
               <li className="flex items-start justify-center">

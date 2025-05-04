@@ -134,10 +134,10 @@ const TermsConditions = () => {
               <li>
                 <strong>{t('terms.contact.email')}:</strong>{' '}
                 <a 
-                  href="mailto:korkachanna88@gmail.com" 
+                  href="mailto:homeolifeua@gmail.com" 
                   className="text-teal-600 hover:text-teal-700 transition-colors duration-300"
                 >
-                  korkachanna88@gmail.com
+                  homeolifeua@gmail.com
                 </a>
               </li>
               <li>

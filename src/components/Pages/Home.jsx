@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import CombinedHeroAbout from '.././/CombineHeroAbout';
+import CombinedHeroAbout from '.././CombineHeroAbout';
 import ContactForm from '.././/ContactForm';
 
-import HomeopathyBenefitsTable from '.././/HomeopathyBenefitsTable';
-import TestimonialsPreview from '.././/Testimonials';
+import HomeopathyBenefitsTable from '.././HomeopathyBenefitsTable';
+import TestimonialsPreview from '.././Testimonials';
 
 function Home() {
 

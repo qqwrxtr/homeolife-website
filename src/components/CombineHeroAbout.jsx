@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import HeroVideo from '../assets/hero.mp4';
-import Doctor from '../assets/doctor.png';
+import Doctor from '../assets/aaaa.jpg';
 import ConsultModal from './modals/consulte.jsx';
 import telegramIcon from './../assets/telegram-svgrepo-com.svg'
 import instagramIcon from './../assets/instagram-1-svgrepo-com.svg'
@@ -368,7 +368,7 @@ const CombinedHeroAbout = () => {
 
                   {/* Email */}
                   <a
-                    href="mailto:korkachanna88@gmail.com"
+                    href="mailto:homeolifeua@gmail.com"
                     className="text-slate-600 hover:text-teal-600 transition-colors duration-300"
                   >
                     <img src={gmailIcon} alt="" className='w-8 h-8 hover:scale-105 transition transition-all duration-300'/>
