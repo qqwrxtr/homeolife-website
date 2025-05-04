@@ -7,28 +7,7 @@ const HomeopathyBenefitsTable = () => {
   const sectionRef = useRef(null);
   const bgRef = useRef(null);
 
-  useEffect(() => {
-    let frameId = 0;
 
-    const animateParallax = () => {
-      if (sectionRef.current && bgRef.current) {
-        const rect = sectionRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // only animate when section is (partially) in view
-        if (rect.top < windowHeight && rect.bottom > 0) {
-          // you can tweak this multiplier to taste
-          const bgOffset = -rect.top * 0.35;
-          bgRef.current.style.transform = `translate3d(0, ${bgOffset}px, 0)`;
-        }
-      }
-
-      frameId = requestAnimationFrame(animateParallax);
-    };
-
-    frameId = requestAnimationFrame(animateParallax);
-    return () => cancelAnimationFrame(frameId);
-  }, []);
 
   return (
     <section className='w-full flex justify-center'>
@@ -74,13 +53,10 @@ const HomeopathyBenefitsTable = () => {
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
+              backgroundAttachment: 'fixed',
               height: '1200px',
               top: '-10%',
-              willChange: 'transform',
               window: '90vw',
-              margin: '0 auto',
-              left: '0',
-              right: '0'
             }}
           />
 
