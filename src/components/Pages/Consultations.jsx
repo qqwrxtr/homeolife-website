@@ -187,127 +187,113 @@ const Consultations = () => {
           </div>
         </section>
         
-        {/* Services Section - Improved Card Design */}
-        <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
-                {t('navigation.consultations')}
-              </h2>
-              <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-6">
-                Подробное описание всех видов консультаций, которые я предлагаю
-              </p>
-              <div className="w-24 h-1 bg-teal-500 mx-auto"></div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Primary Consultation */}
-              <div className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="h-2 bg-gradient-to-r from-teal-400 to-teal-600"></div>
-                <div className="p-8">
-                  <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-center text-slate-800 mb-4">
-                    {t('consultations.services.primaryConsultation.title')}
-                  </h3>
-                  <div className="h-1 w-16 bg-teal-200 mx-auto mb-6"></div>
-                  <p className="text-center text-slate-600 font-medium mb-6">
-                    {t('consultations.services.primaryConsultation.description')}
-                  </p>
-                  <ul className="space-y-3 mb-8">
-                    {t('consultations.services.primaryConsultation.items', { returnObjects: true }).map((item, index) => (
-                      <li key={index} className="flex items-start bg-slate-50 p-3 rounded-lg">
-                        <svg className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                        </svg>
-                        <span className="ml-3 text-slate-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="pt-6 border-t border-slate-100 text-center">
-                    <button 
-                      onClick={openModal}
-                      className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg w-full"
-                    >
-                      {t('hero.bookConsultation')}
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Follow Up */}
-              <div className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="h-2 bg-gradient-to-r from-teal-500 to-teal-700"></div>
-                <div className="p-8">
-                  <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-center text-slate-800 mb-4">
-                    {t('consultations.services.followUp.title')}
-                  </h3>
-                  <div className="h-1 w-16 bg-teal-200 mx-auto mb-6"></div>
-                  <ul className="space-y-3 mb-8">
-                    {t('consultations.services.followUp.items', { returnObjects: true }).map((item, index) => (
-                      <li key={index} className="flex items-start bg-slate-50 p-3 rounded-lg">
-                        <svg className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                        </svg>
-                        <span className="ml-3 text-slate-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="pt-6 border-t border-slate-100 text-center mt-auto">
-                    <button 
-                      onClick={openModal}
-                      className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg w-full"
-                    >
-                      {t('hero.bookConsultation')}
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Emergency */}
-              <div className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="h-2 bg-gradient-to-r from-teal-600 to-teal-800"></div>
-                <div className="p-8">
-                  <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-center text-slate-800 mb-4">
-                    {t('consultations.services.emergency.title')}
-                  </h3>
-                  <div className="h-1 w-16 bg-teal-200 mx-auto mb-6"></div>
-                  <ul className="space-y-3 mb-8">
-                    {t('consultations.services.emergency.items', { returnObjects: true }).map((item, index) => (
-                      <li key={index} className="flex items-start bg-slate-50 p-3 rounded-lg">
-                        <svg className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-                        </svg>
-                        <span className="ml-3 text-slate-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="pt-6 border-t border-slate-100 text-center">
-                    <button 
-                      onClick={openModal}
-                      className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg w-full"
-                    >
-                      {t('hero.bookConsultation')}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+{/* Services Section - Improved Card Design with Single CTA */}
+<section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+        {t('navigation.consultations')}
+      </h2>
+      <p className="text-lg text-slate-600 max-w-3xl mx-auto mb-6">
+        {t('consultations.subtitles')}
+      </p>
+      <div className="w-24 h-1 bg-teal-500 mx-auto"></div>
+    </div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      {/* Primary Consultation */}
+      <div className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+        <div className="h-2 bg-gradient-to-r from-teal-400 to-teal-600"></div>
+        <div className="p-8">
+          <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-3">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
           </div>
-        </section>
+          <h3 className="text-xl font-bold text-center text-slate-800 mb-4">
+            {t('consultations.services.primaryConsultation.title')}
+          </h3>
+          <div className="h-1 w-16 bg-teal-200 mx-auto mb-6"></div>
+          <p className="text-center text-slate-600 font-medium mb-6">
+            {t('consultations.services.primaryConsultation.description')}
+          </p>
+          <ul className="space-y-3">
+            {t('consultations.services.primaryConsultation.items', { returnObjects: true }).map((item, index) => (
+              <li key={index} className="flex items-start bg-slate-50 p-3 rounded-lg">
+                <svg className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                </svg>
+                <span className="ml-3 text-slate-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      
+      {/* Follow Up */}
+      <div className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+        <div className="h-2 bg-gradient-to-r from-teal-500 to-teal-700"></div>
+        <div className="p-8">
+          <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-3">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-center text-slate-800 mb-4">
+            {t('consultations.services.followUp.title')}
+          </h3>
+          <div className="h-1 w-16 bg-teal-200 mx-auto mb-6"></div>
+          <ul className="space-y-3">
+            {t('consultations.services.followUp.items', { returnObjects: true }).map((item, index) => (
+              <li key={index} className="flex items-start bg-slate-50 p-3 rounded-lg">
+                <svg className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                </svg>
+                <span className="ml-3 text-slate-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      
+      {/* Emergency */}
+      <div className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+        <div className="h-2 bg-gradient-to-r from-teal-600 to-teal-800"></div>
+        <div className="p-8">
+          <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-6 transform -rotate-3">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-center text-slate-800 mb-4">
+            {t('consultations.services.emergency.title')}
+          </h3>
+          <div className="h-1 w-16 bg-teal-200 mx-auto mb-6"></div>
+          <ul className="space-y-3">
+            {t('consultations.services.emergency.items', { returnObjects: true }).map((item, index) => (
+              <li key={index} className="flex items-start bg-slate-50 p-3 rounded-lg">
+                <svg className="h-5 w-5 text-teal-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                </svg>
+                <span className="ml-3 text-slate-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    {/* Single CTA Button */}
+    <div className="text-center">
+      <button 
+        onClick={openModal}
+        className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-4 px-10 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl text-lg w-1/2"
+      >
+        {t('hero.bookConsultation')}
+      </button>
+    </div>
+  </div>
+</section>
         
         {/* Benefits Section - Modern Timeline Design */}
         <section className="py-20 bg-slate-50">
@@ -380,8 +366,14 @@ const Consultations = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 md:p-10">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <div className="text-center lg:text-left">
-                      <div className="inline-flex items-center justify-center bg-white/20 backdrop-blur-sm py-5 px-8 rounded-xl mb-8">
-                        <span className="text-5xl font-bold">3500 грн</span>
+                      <div className="flex items-center mb-4">
+                        <div className="inline-flex items-center justify-center bg-white/20 backdrop-blur-sm py-5 px-8 rounded-xl mb-8">
+                          <div className="text-5xl font-bold">3500 грн</div>
+                          <div className="text-2xl font-medium text-white ml-2 mt-4">
+                          / {t('consultations.pricing.month')}
+                        </div>
+                        </div>
+                        
                       </div>
                       
                       <h3 className="text-2xl font-semibold mb-6">
