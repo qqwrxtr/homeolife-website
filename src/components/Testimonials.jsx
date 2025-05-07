@@ -46,7 +46,7 @@ const TestimonialsPreview = () => {
 
   const startAutoplayTimer = () => {
     clearTimeout(autoplayTimerRef.current);
-    autoplayTimerRef.current = setTimeout(goToNext, 5000);
+    autoplayTimerRef.current = setTimeout(goToNext, 3000);
   };
 
   const goToNext = () => {

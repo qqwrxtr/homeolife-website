@@ -2,42 +2,12 @@ import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ConsultModal from '.././modals/consulte.jsx';
 import bgHero from './../../assets/123321.jpg';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS styles
 
 const Consultations = () => {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const consultationsRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
-  const [animationsInitialized, setAnimationsInitialized] = useState(false);
-  
-  // Initialize AOS with animateOnce true - only when component mounts
-  useEffect(() => {
-    // Only initialize animations once
-    if (!animationsInitialized) {
-      AOS.init({
-        duration: 800,
-        easing: 'ease-out',
-        once: true,        // This ensures animations only happen once per page load
-        offset: 120,
-        delay: 0,
-        throttleDelay: 99,
-        startEvent: 'load', // Only trigger on page load, not on other events
-      });
-      
-      setAnimationsInitialized(true);
-      
-      // Store in sessionStorage that animations have run
-      // This prevents re-running on soft navigation (if applicable)
-      sessionStorage.setItem('consultationsAnimated', 'true');
-    }
-    
-    // Clean up function
-    return () => {
-      // No specific cleanup needed for AOS
-    };
-  }, []); // Empty dependency array ensures it runs only once
   
   // Check screen size on mount and resize
   useEffect(() => {
@@ -86,17 +56,11 @@ const Consultations = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-[95vw] md:max-w-[90vw] relative z-10 flex flex-col items-center justify-center text-center min-h-[400px] md:min-h-[500px]">
           <h1 
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 drop-shadow-md"
-            data-aos="fade-down"
-            data-aos-delay="100"
-            data-aos-once="true"
           >
             {t('consultations.title')}
           </h1>
           <p 
             className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 md:mb-10 leading-relaxed"
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-once="true"
           >
             {t('consultations.subtitle')}
           </p>
@@ -104,9 +68,6 @@ const Consultations = () => {
             onClick={openModal}
             className="bg-teal-500 text-white hover:bg-teal-600 font-medium px-6 sm:px-8 py-3 md:py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-base sm:text-lg flex items-center"
             aria-label={t('hero.bookConsultation')}
-            data-aos="zoom-in"
-            data-aos-delay="300"
-            data-aos-once="true"
           >
             {t('hero.bookConsultation')}
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -124,22 +85,14 @@ const Consultations = () => {
             <div className="flex flex-col items-center mb-8 md:mb-12">
               <h2 
                 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 mb-4 md:mb-6 text-center"
-                data-aos="fade-up"
-                data-aos-once="true"
               >
                 {t('consultations.individualApproach.title')}
               </h2>
               <div 
                 className="w-16 md:w-24 h-1 bg-teal-500 mb-6 md:mb-8"
-                data-aos="zoom-in"
-                data-aos-delay="100"
-                data-aos-once="true"
               ></div>
               <p 
                 className="text-base sm:text-lg md:text-xl text-slate-700 leading-relaxed max-w-4xl text-center"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                data-aos-once="true"
               >
                 {t('consultations.individualApproach.description')}
               </p>
@@ -148,10 +101,6 @@ const Consultations = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mt-8 md:mt-12">
               <div 
                 className="bg-white rounded-xl p-6 md:p-8 shadow-lg border-t-4 border-teal-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                data-aos="fade-right"
-                data-aos-delay="100"
-                data-aos-once="true"
-                data-aos-anchor-placement="top-bottom"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center mb-4 md:mb-6">
                   <span className="flex justify-center items-center w-12 h-12 rounded-full bg-teal-500 text-white mb-4 sm:mb-0 sm:mr-4 mx-auto sm:mx-0">
@@ -170,10 +119,6 @@ const Consultations = () => {
               
               <div 
                 className="bg-white rounded-xl p-6 md:p-8 shadow-lg border-t-4 border-teal-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                data-aos="fade-left"
-                data-aos-delay="200"
-                data-aos-once="true"
-                data-aos-anchor-placement="top-bottom"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center mb-4 md:mb-6">
                   <span className="flex justify-center items-center w-12 h-12 rounded-full bg-teal-500 text-white mb-4 sm:mb-0 sm:mr-4 mx-auto sm:mx-0">
@@ -199,16 +144,11 @@ const Consultations = () => {
             <div className="text-center mb-10 md:mb-16">
               <h2 
                 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 mb-4 md:mb-6"
-                data-aos="fade-up"
-                data-aos-once="true"
               >
                 {t('consultations.attention.title')}
               </h2>
               <div 
                 className="w-16 md:w-24 h-1 bg-teal-500 mx-auto mb-6 md:mb-8"
-                data-aos="zoom-in"
-                data-aos-delay="100"
-                data-aos-once="true"
               ></div>
             </div>
             
@@ -217,9 +157,6 @@ const Consultations = () => {
                 <div 
                   key={index} 
                   className="bg-slate-50 p-4 md:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-l-4 border-teal-500"
-                  data-aos="fade-up"
-                  data-aos-delay={100 + index * 100}
-                  data-aos-once="true"
                 >
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mr-4">
@@ -272,24 +209,16 @@ const Consultations = () => {
             <div className="text-center mb-10 md:mb-16">
               <h2 
                 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 mb-4 md:mb-6"
-                data-aos="fade-up"
-                data-aos-once="true"
               >
                 {t('navigation.consultations')}
               </h2>
               <p 
                 className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto mb-4 md:mb-6"
-                data-aos="fade-up"
-                data-aos-delay="100"
-                data-aos-once="true"
               >
                 {t('consultations.subtitles')}
               </p>
               <div 
                 className="w-16 md:w-24 h-1 bg-teal-500 mx-auto"
-                data-aos="zoom-in"
-                data-aos-delay="200"
-                data-aos-once="true"
               ></div>
             </div>
             
@@ -297,9 +226,6 @@ const Consultations = () => {
               {/* Primary Consultation */}
               <div 
                 className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-                data-aos="fade-up"
-                data-aos-delay="100"
-                data-aos-once="true"
               >
                 <div className="h-2 bg-gradient-to-r from-teal-400 to-teal-600"></div>
                 <div className="p-6 md:p-8">
@@ -331,9 +257,6 @@ const Consultations = () => {
               {/* Follow Up */}
               <div 
                 className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                data-aos-once="true"
               >
                 <div className="h-2 bg-gradient-to-r from-teal-500 to-teal-700"></div>
                 <div className="p-6 md:p-8">
@@ -362,9 +285,6 @@ const Consultations = () => {
               {/* Emergency */}
               <div 
                 className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-                data-aos="fade-up"
-                data-aos-delay="300"
-                data-aos-once="true"
               >
                 <div className="h-2 bg-gradient-to-r from-teal-600 to-teal-800"></div>
                 <div className="p-6 md:p-8">
@@ -397,9 +317,6 @@ const Consultations = () => {
                 onClick={openModal}
                 className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 md:py-4 px-6 md:px-10 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg w-full sm:w-auto sm:min-w-[200px] md:min-w-[300px]"
                 aria-label={t('hero.bookConsultation')}
-                data-aos="zoom-in"
-                data-aos-delay="100"
-                data-aos-once="true"
               >
                 {t('hero.bookConsultation')}
               </button>
@@ -413,16 +330,11 @@ const Consultations = () => {
             <div className="text-center mb-10 md:mb-16">
               <h2 
                 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 mb-4 md:mb-6"
-                data-aos="fade-up"
-                data-aos-once="true"
               >
                 {t('consultations.benefits.title')}
               </h2>
               <div 
                 className="w-16 md:w-24 h-1 bg-teal-500 mx-auto"
-                data-aos="zoom-in"
-                data-aos-delay="100"
-                data-aos-once="true"
               ></div>
             </div>
             
@@ -439,9 +351,6 @@ const Consultations = () => {
                     <div 
                       key={index} 
                       className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-                      data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-                      data-aos-delay={100 * index}
-                      data-aos-once="true"
                     >
                       <div className="md:w-1/2 relative mb-0">
                         {/* Circle marker on timeline - visible only on desktop */}
@@ -471,8 +380,6 @@ const Consultations = () => {
                   onClick={openModal}
                   className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-3 px-6 md:px-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform inline-flex items-center text-base sm:text-lg"
                   aria-label={t('hero.bookConsultation')}
-                  data-aos="zoom-in"
-                  data-aos-once="true"
                 >
                   {t('hero.bookConsultation')}
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -489,8 +396,6 @@ const Consultations = () => {
           <div className="container mx-auto px-4">
             <div 
               className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-300"
-              data-aos="fade-up"
-              data-aos-once="true"
             >
               <div className="p-2 sm:p-12 text-white">
                 <div className="text-center mb-8 md:mb-12">
@@ -504,9 +409,6 @@ const Consultations = () => {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
                     <div 
                       className="text-center lg:text-left"
-                      data-aos="fade-right"
-                      data-aos-delay="100"
-                      data-aos-once="true"
                     >
                       <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start mb-4">
                         <div className="inline-flex items-center justify-center bg-white/20 backdrop-blur-sm py-4 px-6 md:py-5 md:px-8 rounded-xl mb-4 md:mb-8">
@@ -526,9 +428,6 @@ const Consultations = () => {
                           <li 
                             key={index} 
                             className="flex items-start bg-white/10 p-3 md:p-4 rounded-lg backdrop-blur-sm"
-                            data-aos="fade-up"
-                            data-aos-delay={50 * index}
-                            data-aos-once="true"
                           >
                             <svg className="h-5 w-5 md:h-6 md:w-6 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
@@ -540,9 +439,6 @@ const Consultations = () => {
                       
                       <div 
                         className="bg-teal-900/40 text-white font-semibold text-base md:text-lg p-3 md:p-4 rounded-lg mb-6 inline-block"
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                        data-aos-once="true"
                       >
                         {t('consultations.pricing.discount')}
                       </div>
@@ -550,9 +446,6 @@ const Consultations = () => {
                     
                     <div 
                       className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm p-6 md:p-8 rounded-xl border border-white/20"
-                      data-aos="fade-left"
-                      data-aos-delay="200"
-                      data-aos-once="true"
                     >
                       <p className="text-base md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed">
                         {t('consultations.conclusion.description')}
@@ -562,9 +455,6 @@ const Consultations = () => {
                         onClick={openModal}
                         className="w-full bg-white text-teal-700 hover:bg-teal-50 font-medium py-3 md:py-4 px-4 md:px-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg flex items-center justify-center text-base md:text-lg"
                         aria-label={t('consultations.cta.buttonText')}
-                        data-aos="zoom-in"
-                        data-aos-delay="300"
-                        data-aos-once="true"
                       >
                         {t('consultations.cta.buttonText')}
                         <svg 
