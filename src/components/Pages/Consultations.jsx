@@ -397,7 +397,7 @@ const Consultations = () => {
             <div 
               className="bg-gradient-to-br from-teal-600 to-teal-800 rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-300"
             >
-              <div className="p-2 sm:p-12 text-white">
+              <div className="p-6 sm:p-12 text-white">
                 <div className="text-center mb-8 md:mb-12">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
                     {t('consultations.pricing.title')}
@@ -405,7 +405,7 @@ const Consultations = () => {
                   <div className="w-16 md:w-24 h-1 bg-white/30 mx-auto"></div>
                 </div>
                 
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-10">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 sm:p-10">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
                     <div 
                       className="text-center lg:text-left"
