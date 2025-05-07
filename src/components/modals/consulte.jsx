@@ -102,7 +102,7 @@ const HealthQuestionnaire = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[1234] flex items-center justify-center">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center">
       {/* Backdrop with blur effect */}
       <div 
         className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"

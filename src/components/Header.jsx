@@ -47,7 +47,7 @@ const Header = () => {
     }
   };
 
-  // Close dropdown and mobile menu when clicking outside
+  // Handle dropdown and mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -91,7 +91,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`w-full shadow-md bg-white/95 backdrop-blur-sm sticky top-0 z-[999] transition-all duration-300 ease-in-out
+      className={`w-full shadow-md bg-white/95 backdrop-blur-sm sticky top-0 z-[9999] transition-all duration-300 ease-in-out
         ${isScrolled ? 'py-1 md:py-2' : 'py-1 md:py-2'}`}
     >
       {/* Logo and Main Navigation */}
@@ -127,8 +127,7 @@ const Header = () => {
               <li ref={dropdownRef} className="relative group">
                 <Link 
                   to="/usefulInfo"
-                  className="text-slate-700 hover:text-slate-900 transition-colors duration-300 pb-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-500 after:transition-all after:duration-300 group-hover:after:w-full flex items-center cursor-pointer"
-                  onMouseEnter={() => setIsDropdownOpen(true)}
+                  className="text-slate-700 hover:text-slate-900 transition-colors duration-300 pb-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-500 after:transition-all after:duration-300 hover:after:w-full flex items-center cursor-pointer"
                   onClick={toggleDropdown}
                   aria-expanded={isDropdownOpen}
                   aria-haspopup="true"
@@ -136,7 +135,7 @@ const Header = () => {
                   {t('navigation.usefulInfo')}
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
-                    className={`h-3 w-3 md:h-4 md:w-4 ml-1 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : 'group-hover:rotate-180'}`}
+                    className={`h-3 w-3 md:h-4 md:w-4 ml-1 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor"
@@ -147,11 +146,9 @@ const Header = () => {
                 
                 {/* Desktop Dropdown - Shows on hover or click */}
                 <div 
-                  className={`absolute left-0 mt-1 rounded-md shadow-lg bg-white ring-1 ring-slate-200 transition-all duration-200 z-[999] w-full ${
-                    isDropdownOpen ? 'opacity-100 transform translate-y-0 visible' : 'opacity-0 invisible transform -translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto'
-                  }`}
-                  onMouseLeave={() => setIsDropdownOpen(false)}
-                >
+                  className={`absolute left-0 mt-1 rounded-md shadow-lg bg-white ring-1 ring-slate-200 transition-all duration-300 z-[99] w-full 
+                    group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+                    ${isDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
                   <div className="py-1 rounded-md overflow-hidden">
                     <Link 
                       to="/my-approach" 
@@ -228,11 +225,11 @@ const Header = () => {
       {/* Mobile Menu - Expandable on mobile */}
       <div 
         ref={mobileMenuRef}
-        className={`lg:hidden bg-white overflow-hidden transition-all duration-300 ease-in-out border-t border-slate-100 shadow-lg ${
-          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        className={`lg:hidden fixed inset-x-0 top-[calc(100%)] bg-white overflow-hidden transition-all duration-300 ease-in-out border-t border-slate-100 shadow-lg z-[9998] ${
+          isMenuOpen ? 'max-h-screen opacity-100 visible' : 'max-h-0 opacity-0 invisible'
         }`}
       >
-        <nav className="container mx-auto px-4 py-2">
+        <nav className="container mx-auto px-4 py-3">
           <ul className="flex flex-col divide-y divide-slate-100">
             <li>
               <Link 
@@ -258,39 +255,49 @@ const Header = () => {
                 {t('navigation.consultations')}
               </Link>
             </li>
-            <li className="py-2">
-              <div className="py-2 text-sm text-slate-900 font-medium flex items-center">
+            <li>
+              <Link 
+                to="/usefulInfo" 
+                className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {t('navigation.usefulInfo')}
-              </div>
+              </Link>
+            </li>
+            <li>
               <Link 
                 to="/my-approach" 
-                className="flex items-center py-2 pl-6 text-sm text-slate-600 hover:text-teal-600 transition-all duration-200"
+                className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
                 {t('dropdown.myApproach')}
               </Link>
+            </li>
+            <li>
               <Link 
                 to="/what-is-homeopathy" 
-                className="flex items-center py-2 pl-6 text-sm text-slate-600 hover:text-teal-600 transition-all duration-200"
+                className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
                 {t('dropdown.whatIsHomeopathy')}
               </Link>
+            </li>
+            <li>
               <Link 
                 to="/how-i-work" 
-                className="flex items-center py-2 pl-6 text-sm text-slate-600 hover:text-teal-600 transition-all duration-200"
+                className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
                 {t('dropdown.howIWork')}

@@ -89,10 +89,10 @@ const HomeopathyBenefitsTable = () => {
                     {t('benefits.safety.description')}.{t('benefits.familySupport.description')}
                   </p>
                 </div>
-                <div className="p-6 flex flex-col items-start border-t border-l border-r border-slate-400">
+                <div className="p-6 flex flex-col items-start border border-slate-400">
                   <div className="flex items-start mb-3">
                     
-                    <h3 className="text-lg font-medium text-slate-800">
+                    <h3 className="text-lg font-medium text-slate-800 text-start">
                       {t('benefits.naturalRecovery.title')}
                     </h3>
                   </div>
@@ -105,7 +105,7 @@ const HomeopathyBenefitsTable = () => {
                 <div className="p-6 flex flex-col items-start border-t border-l md:border-r-0 border-r border-b border-slate-400 md:col-span-2">
                   <div className="flex items-start mb-3">
                     
-                    <h3 className="text-lg font-medium text-slate-800">
+                    <h3 className="text-lg font-medium text-slate-800 text-start">
                       {t('benefits.gentleAction.title')}
                     </h3>
                   </div>
@@ -117,7 +117,7 @@ const HomeopathyBenefitsTable = () => {
                 <div className="p-6 flex flex-col items-start border-x border-b border-slate-400">
                   <div className="flex items-start mb-3">
                     
-                    <h3 className="text-lg font-medium text-slate-800">
+                    <h3 className="text-lg font-medium text-slate-800 text-start">
                       {t('benefits.chronicConditions.title')}
                     </h3>
                   </div>

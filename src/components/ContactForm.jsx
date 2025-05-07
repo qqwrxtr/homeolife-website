@@ -147,7 +147,7 @@ const ContactForm = () => {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
             {/* Left Column - Contact Information */}
             <div className="lg:w-2/5">
-              <div className="bg-slate-50 p-8 rounded-lg border border-slate-200 h-full">
+              <div className="bg-slate-50 sm:p-8 rounded-lg border border-slate-200 h-full">
                 <h3 className="text-2xl font-bold text-slate-800 mb-6">
                   {t('contact.infoTitle')}
                 </h3>
@@ -266,7 +266,7 @@ const ContactForm = () => {
             
             {/* Right Column - Contact Form */}
             <div className="lg:w-3/5">
-              <div className="bg-white p-8 rounded-lg border border-slate-200 shadow-sm">
+              <div className="bg-white sm:p-8 rounded-lg border border-slate-200 shadow-sm">
                 <h3 className="text-2xl font-bold text-slate-800 mb-6">
                   {t('contact.formTitle')}
                 </h3>

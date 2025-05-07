@@ -347,10 +347,11 @@ const CombinedHeroAbout = () => {
                 </div>
                 
                 {/* Social Media Links */}
-                <div className="flex items-center space-x-4 mt-8 pt-4 border-t border-slate-200">
+                <div className="flex sm:flex-row flex-col items-center space-x-4 mt-8 pt-4 border-t border-slate-200">
                   <span className="text-slate-600">{t('about.contactMe')}:</span>
 
-                  {/* Instagram */}
+                  <div className="socials flex items-center space-x-4">
+                    {/* Instagram */}
                   <a
                     href="https://www.instagram.com/dr_anna_korkach/"
                     className="text-slate-600 hover:text-teal-600 transition-colors duration-300"
@@ -389,6 +390,7 @@ const CombinedHeroAbout = () => {
                   >
                     <img src={callIcon} alt="" className='w-8 h-8 hover:scale-105 transition transition-all duration-300'/>
                   </a>
+                  </div>
                 </div>
 
               </div>
