@@ -8,7 +8,7 @@ import './i18n';
 
 // Import your page components
 import MyApproach from './components/Pages/MyAproach';
-// import WhatIsHomeopathy from './components/Pages/WhatIsHomeopathy';
+import WhatIsHomeopathy from './components/Pages/WhatIsHomeopathy';
 // import HowIWork from './components/Pages/HowIWork';
 import Consultations from './components/Pages/Consultations';
 // import UsefulInfo from './components/Pages/UsefulInfo';
@@ -24,8 +24,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/my-approach" element={<MyApproach />} />
-          {/* 
           <Route path="/what-is-homeopathy" element={<WhatIsHomeopathy />} />
+          {/* 
+          
           <Route path="/how-i-work" element={<HowIWork />} />
           <Route path="/usefulInfo" element={<UsefulInfo />} /> */}
           <Route path="/consultations" element={<Consultations />} />
