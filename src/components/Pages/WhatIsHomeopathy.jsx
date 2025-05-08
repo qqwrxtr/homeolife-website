@@ -44,16 +44,6 @@ const WhatIsHomeopathy = () => {
     };
   }, []);
 
-  // Handle parallax effect on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      setOffset(window.pageYOffset);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   // Toggle read more sections
   const toggleReadMore = (section) => {
