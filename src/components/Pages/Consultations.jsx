@@ -44,7 +44,7 @@ const Consultations = () => {
           backgroundImage: `url(${bgHero})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: isMobile ? 'fixed' : 'fixed' // Better mobile performance
+          backgroundAttachment: isMobile ? 'scroll' : 'fixed' // Better mobile performance
         }}
       >
         {/* Dark overlay with gradient */}
