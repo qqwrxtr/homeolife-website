@@ -114,7 +114,7 @@ const WhatIsHomeopathy = () => {
   return (
     <div className="min-h-screen w-full">
       {/* Hero Section with Fixed Background */}
-      <section className="relative w-full min-h-[70vh] md:min-h-[70vh] lg:min-h-[80vh] overflow-hidden bg-teal-800 text-white">
+      <section className="relative w-full min-h-[40vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
         {/* Fixed Background */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -150,14 +150,10 @@ const WhatIsHomeopathy = () => {
               </span>
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-10 drop-shadow-sm">
-              {t('what-is-homeopathy.description')}
-            </p>
-            
             <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">              
               <button 
                 onClick={() => scrollToSection('conclusion')}
-                className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg bg-white text-teal-700 hover:bg-teal-50 transition-colors rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300"
+                className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg bg-white text-teal-700 hover:bg-teal-50 transition-colors rounded-full font-semibold shadow-lg hover:shadow-xl duration-300"
               >
                 {t('final-cta.title')}
               </button>
@@ -168,6 +164,113 @@ const WhatIsHomeopathy = () => {
 
       {/* Main Content */}
       <div className="container mx-auto max-w-[95vw] sm:max-w-[90vw]">
+                
+        {/* History Section */}
+        <section 
+          id="homeopathy-history" 
+          ref={sectionRefs['homeopathy-history']}
+          className="my-12 sm:my-16 md:my-20 lg:my-24"
+        >
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              {/* Image column */}
+              <div className="relative h-[250px] sm:h-[300px] md:h-auto order-1 md:order-none">
+                <img 
+                  src={hanemannPortrait} 
+                  alt="Samuel Hahnemann" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-8">
+                  <h3 className="text-white text-xl sm:text-2xl font-bold mb-1 sm:mb-2">Самуэль Ганеман</h3>
+                  <p className="text-white/80 text-sm sm:text-base">1755-1843</p>
+                  <p className="text-white/70 text-xs sm:text-sm mt-1 sm:mt-2">{t('mainGeo')}</p>
+                </div>
+              </div>
+              
+              {/* Text column */}
+              <div className="p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 flex flex-col justify-center">
+                <div className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-2 bg-amber-100 text-amber-700 rounded-full mb-4 sm:mb-6 self-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 sm:w-5 sm:h-5">
+                    <path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0" />
+                    <path d="m12 7 1.5 2.5h2.5l.5 2-1.5 2-1.5-2L12 7Z" />
+                    <path d="M5.5 12h3" />
+                    <path d="M15.5 12h3" />
+                    <path d="M12 16v3" />
+                  </svg>
+                  <span className="font-semibold text-xs sm:text-sm">{t('homeopathy-history.title')}</span>
+                </div>
+                
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4 sm:mb-6">
+                  {t('homeopathy-experience.title')}
+                </h2>
+                
+                <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed mb-3 sm:mb-4">
+                  {t('homeopathy-history.description')}
+                </p>
+                
+                <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed mb-4 sm:mb-6">
+                  {t('homeopathy-history.additionalInfo')}
+                </p>
+                
+                <div className={`transition-all duration-500 overflow-hidden ${readMore.history ? 'max-h-[1000px]' : 'max-h-0'}`}>
+                  <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed mb-3 sm:mb-4">
+                    {t('homeopathy-history.hanemannBio')}
+                  </p>
+                  
+                  <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed mb-4 sm:mb-6">
+                    {t('homeopathy-history.discovery')}
+                  </p>
+                  
+                  <div className="flex items-center bg-amber-50 p-3 sm:p-4 rounded-lg border-l-4 border-amber-400">
+                    <div className="flex-shrink-0 mr-3 sm:mr-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-500 sm:w-6 sm:h-6">
+                        <path d="M15 7h1a2 2 0 0 1 2 2v1" />
+                        <path d="M9 12h4.5" />
+                        <path d="M9 16h4.5" />
+                        <path d="M19.5 14.5v1a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4V8.5c0-1.58.93-3 2.5-3.5" />
+                        <path d="M3 8h3.5A1.5 1.5 0 0 0 8 6.5v0A1.5 1.5 0 0 0 6.5 5H5" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-amber-800 text-sm sm:text-base">{t('funFact')}</h4>
+                      <p className="text-amber-700 text-xs sm:text-sm">{t('funFactText')}</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <button 
+                  onClick={() => toggleReadMore('history')}
+                  className="mt-4 sm:mt-6 text-amber-600 hover:text-amber-800 flex items-center font-medium self-start group text-sm sm:text-base"
+                >
+                  <span>{readMore.history ? t('ReadNoMore') : t('ReadMore')}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`ml-1 transition-transform duration-300 ${readMore.history ? 'rotate-180' : ''} sm:w-5 sm:h-5`}>
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                
+                <div className="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
+                  <div className="bg-amber-50 p-3 sm:p-4 rounded-lg text-center">
+                    <div className="text-xl sm:text-2xl font-bold text-amber-700 mb-1">1755</div>
+                    <div className="text-amber-800 text-xs sm:text-sm">{t('Year')}</div>
+                  </div>
+                  <div className="bg-amber-50 p-3 sm:p-4 rounded-lg text-center">
+                    <div className="text-xl sm:text-2xl font-bold text-amber-700 mb-1">1790</div>
+                    <div className="text-amber-800 text-xs sm:text-sm">{t('FirstExperiment')}</div>
+                  </div>
+                  <div className="bg-amber-50 p-3 sm:p-4 rounded-lg text-center">
+                    <div className="text-xl sm:text-2xl font-bold text-amber-700 mb-1">1810</div>
+                    <div className="text-amber-800 text-xs sm:text-sm">{t('Organ')}</div>
+                  </div>
+                  <div className="bg-amber-50 p-3 sm:p-4 rounded-lg text-center">
+                    <div className="text-xl sm:text-2xl font-bold text-amber-700 mb-1">1843</div>
+                    <div className="text-amber-800 text-xs sm:text-sm">{t('Died')}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* What is Homeopathy */}
         <section 
           id="what-is-homeopathy" 
@@ -299,12 +402,12 @@ const WhatIsHomeopathy = () => {
                         <p className="text-sm sm:text-base mb-3 sm:mb-4 text-white/80">{t('third-principle.approach')}</p>
                         
                         <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-4 sm:mt-6">
-                          {t('third-principle.factors', { returnObjects: true }).slice(0, 4).map((factor, index) => (
+                          {t('third-principle.factors', { returnObjects: true }).slice(0, 6).map((factor, index) => (
                             <div key={index} className="bg-white/5 p-2 sm:p-3 rounded-md sm:rounded-lg flex items-center">
                               <div className="bg-teal-700 h-5 w-5 sm:h-6 sm:w-6 rounded-full flex items-center justify-center mr-2">
                                 <span className="text-xs">{index + 1}</span>
                               </div>
-                              <span className="text-xs sm:text-sm">{factor}</span>
+                              <span className="text-xs sm:text-sm text-start">{factor}</span>
                             </div>
                           ))}
                         </div>
@@ -320,113 +423,7 @@ const WhatIsHomeopathy = () => {
             </div>
           </div>
         </section>
-        
-        {/* History Section */}
-        <section 
-          id="homeopathy-history" 
-          ref={sectionRefs['homeopathy-history']}
-          className="my-12 sm:my-16 md:my-20 lg:my-24"
-        >
-          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-              {/* Image column */}
-              <div className="relative h-[250px] sm:h-[300px] md:h-auto order-1 md:order-none">
-                <img 
-                  src={hanemannPortrait} 
-                  alt="Samuel Hahnemann" 
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-8">
-                  <h3 className="text-white text-xl sm:text-2xl font-bold mb-1 sm:mb-2">Самуэль Ганеман</h3>
-                  <p className="text-white/80 text-sm sm:text-base">1755-1843</p>
-                  <p className="text-white/70 text-xs sm:text-sm mt-1 sm:mt-2">{t('mainGeo')}</p>
-                </div>
-              </div>
-              
-              {/* Text column */}
-              <div className="p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 flex flex-col justify-center">
-                <div className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-2 bg-amber-100 text-amber-700 rounded-full mb-4 sm:mb-6 self-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 sm:w-5 sm:h-5">
-                    <path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0" />
-                    <path d="m12 7 1.5 2.5h2.5l.5 2-1.5 2-1.5-2L12 7Z" />
-                    <path d="M5.5 12h3" />
-                    <path d="M15.5 12h3" />
-                    <path d="M12 16v3" />
-                  </svg>
-                  <span className="font-semibold text-xs sm:text-sm">{t('homeopathy-history.title')}</span>
-                </div>
-                
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4 sm:mb-6">
-                  {t('homeopathy-experience.title')}
-                </h2>
-                
-                <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed mb-3 sm:mb-4">
-                  {t('homeopathy-history.description')}
-                </p>
-                
-                <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed mb-4 sm:mb-6">
-                  {t('homeopathy-history.additionalInfo')}
-                </p>
-                
-                <div className={`transition-all duration-500 overflow-hidden ${readMore.history ? 'max-h-[1000px]' : 'max-h-0'}`}>
-                  <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed mb-3 sm:mb-4">
-                    {t('homeopathy-history.hanemannBio')}
-                  </p>
-                  
-                  <p className="text-sm sm:text-base md:text-lg text-slate-700 leading-relaxed mb-4 sm:mb-6">
-                    {t('homeopathy-history.discovery')}
-                  </p>
-                  
-                  <div className="flex items-center bg-amber-50 p-3 sm:p-4 rounded-lg border-l-4 border-amber-400">
-                    <div className="flex-shrink-0 mr-3 sm:mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-500 sm:w-6 sm:h-6">
-                        <path d="M15 7h1a2 2 0 0 1 2 2v1" />
-                        <path d="M9 12h4.5" />
-                        <path d="M9 16h4.5" />
-                        <path d="M19.5 14.5v1a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4V8.5c0-1.58.93-3 2.5-3.5" />
-                        <path d="M3 8h3.5A1.5 1.5 0 0 0 8 6.5v0A1.5 1.5 0 0 0 6.5 5H5" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-amber-800 text-sm sm:text-base">{t('funFact')}</h4>
-                      <p className="text-amber-700 text-xs sm:text-sm">{t('funFactText')}</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <button 
-                  onClick={() => toggleReadMore('history')}
-                  className="mt-4 sm:mt-6 text-amber-600 hover:text-amber-800 flex items-center font-medium self-start group text-sm sm:text-base"
-                >
-                  <span>{readMore.history ? t('ReadNoMore') : t('ReadMore')}</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`ml-1 transition-transform duration-300 ${readMore.history ? 'rotate-180' : ''} sm:w-5 sm:h-5`}>
-                    <path d="m6 9 6 6 6-6" />
-                  </svg>
-                </button>
-                
-                <div className="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
-                  <div className="bg-amber-50 p-3 sm:p-4 rounded-lg text-center">
-                    <div className="text-xl sm:text-2xl font-bold text-amber-700 mb-1">1755</div>
-                    <div className="text-amber-800 text-xs sm:text-sm">{t('Year')}</div>
-                  </div>
-                  <div className="bg-amber-50 p-3 sm:p-4 rounded-lg text-center">
-                    <div className="text-xl sm:text-2xl font-bold text-amber-700 mb-1">1790</div>
-                    <div className="text-amber-800 text-xs sm:text-sm">{t('FirstExperiment')}</div>
-                  </div>
-                  <div className="bg-amber-50 p-3 sm:p-4 rounded-lg text-center">
-                    <div className="text-xl sm:text-2xl font-bold text-amber-700 mb-1">1810</div>
-                    <div className="text-amber-800 text-xs sm:text-sm">{t('Organ')}</div>
-                  </div>
-                  <div className="bg-amber-50 p-3 sm:p-4 rounded-lg text-center">
-                    <div className="text-xl sm:text-2xl font-bold text-amber-700 mb-1">1843</div>
-                    <div className="text-amber-800 text-xs sm:text-sm">{t('Died')}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
+
         {/* Principles in Practice */}
         <section 
           id="principles" 
@@ -559,7 +556,7 @@ const WhatIsHomeopathy = () => {
                   </p>
                 </div>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
                   <div className="bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-slate-100 text-center">
                     <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto bg-teal-100 rounded-full flex items-center justify-center text-teal-600 mb-2 sm:mb-3">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5 md:w-6 md:h-6">
@@ -570,6 +567,16 @@ const WhatIsHomeopathy = () => {
                       </svg>
                     </div>
                     <h4 className="font-medium text-slate-800 mb-1 text-xs sm:text-sm md:text-base">{t('homeopathic-remedies.children')}</h4>
+                  </div>
+
+                  <div className="bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-slate-100 text-center">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto bg-teal-100 rounded-full flex items-center justify-center text-teal-600 mb-2 sm:mb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5 md:w-6 md:h-6">
+                        <circle cx="12" cy="7" r="4"/>
+                        <path d="M8 15a4 4 0 0 0-4 4v2h16v-2a4 4 0 0 0-4-4H8z"/>
+                      </svg>
+                    </div>
+                    <h4 className="font-medium text-slate-800 mb-1 text-xs sm:text-sm md:text-base">{t('homeopathic-remedies.normals')}</h4>
                   </div>
                   
                   <div className="bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-slate-100 text-center">
@@ -635,97 +642,43 @@ const WhatIsHomeopathy = () => {
           </div>
         </section>
 
-        {/* Conclusion Section */}
+        {/* Conclusion Section - Without Cards */}
         <section 
           id="conclusion" 
           ref={sectionRefs['conclusion']}
-          className="mb-8 sm:mb-12 md:mb-16"
+          className="my-12 sm:my-16 md:my-20 lg:my-24"
         >
-          <div className="bg-teal-600 rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl overflow-hidden text-white">
-            <div className="relative px-4 py-10 sm:px-6 sm:py-12 md:p-16">
-              {/* Background decorative elements */}
-              <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute -top-20 -right-20 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-teal-500/30 rounded-full"></div>
-                <div className="absolute -bottom-20 -left-20 w-40 sm:w-60 md:w-80 h-40 sm:h-60 md:h-80 bg-teal-500/20 rounded-full"></div>
-              </div>
-              
-              {/* Content container */}
-              <div className="relative z-10 max-w-5xl mx-auto">
-                {/* Section label */}
-                <div className="flex justify-center mb-6 sm:mb-8">
-                  <div className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-2 md:px-5 md:py-2 bg-teal-700/40 backdrop-blur-sm text-white rounded-full">
+          <div className="bg-gradient-to-br from-slate-900 to-teal-900 rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl overflow-hidden text-white">
+            <div className="p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
+              <div className="flex flex-col justify-between items-start md:items-center mb-6 sm:mb-8 md:mb-12">
+                <div>
+                  <div className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-2 bg-white/10 backdrop-blur-sm text-white rounded-full mb-3 sm:mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 sm:w-5 sm:h-5">
                       <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
                       <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
                     </svg>
-                    <span className="font-medium text-xs sm:text-sm">{t('conclusion.title')}</span>
+                    <span className="font-semibold text-xs sm:text-sm">{t('conclusion.title')}</span>
                   </div>
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3">{t('conclusion.description')}</h2>
                 </div>
+              </div>
+              
+              {/* CTA Section - Unchanged */}
+              <div className="relative bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-white/10 overflow-hidden">
+                <div className="absolute top-0 right-0 -mt-10 -mr-10 w-24 sm:w-32 md:w-40 h-24 sm:h-32 md:h-40 bg-teal-500/20 rounded-full blur-xl"></div>
+                <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-24 sm:w-32 md:w-40 h-24 sm:h-32 md:h-40 bg-blue-500/10 rounded-full blur-xl"></div>
                 
-                {/* Main heading */}
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 sm:mb-12 md:mb-16 text-center leading-tight max-w-4xl mx-auto">
-                  {t('conclusion.description')}
-                </h2>
-                
-                {/* Benefits cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-12 md:mb-16">
-                  {/* Card 1: Experience */}
-                  <div className="bg-teal-700/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center border border-teal-500/30 hover:bg-teal-700/40 transition-colors duration-300">
-                    <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-teal-500/20 mb-3 sm:mb-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6 md:w-7 md:h-7">
-                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-                        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
-                      </svg>
-                    </div>
-                    <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3">{t('conclusion.benefits.experience.title')}</h3>
+                <div className="relative z-10 flex flex-col md:items-center md:justify-between">
+                  <div className="md:pr-6 lg:pr-10 mb-4">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">{t('final-cta.title')}</h3>
                     <p className="text-white/80 text-xs sm:text-sm md:text-base">
-                      {t('conclusion.benefits.experience.description')}
+                      {t('final-cta.description')}
                     </p>
                   </div>
-                  
-                  {/* Card 2: Care */}
-                  <div className="bg-teal-700/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center border border-teal-500/30 hover:bg-teal-700/40 transition-colors duration-300">
-                    <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-teal-500/20 mb-3 sm:mb-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6 md:w-7 md:h-7">
-                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3">{t('conclusion.benefits.care.title')}</h3>
-                    <p className="text-white/80 text-xs sm:text-sm md:text-base">
-                      {t('conclusion.benefits.care.description')}
-                    </p>
-                  </div>
-                  
-                  {/* Card 3: Support */}
-                  <div className="bg-teal-700/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center border border-teal-500/30 hover:bg-teal-700/40 transition-colors duration-300">
-                    <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-teal-500/20 mb-3 sm:mb-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6 md:w-7 md:h-7">
-                        <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
-                        <path d="M19 10v1a7 7 0 0 1-14 0v-1" />
-                        <line x1="12" y1="19" x2="12" y2="23" />
-                        <line x1="8" y1="23" x2="16" y2="23" />
-                      </svg>
-                    </div>
-                    <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3">{t('conclusion.benefits.support.title')}</h3>
-                    <p className="text-white/80 text-xs sm:text-sm md:text-base">
-                      {t('conclusion.benefits.support.description')}
-                    </p>
-                  </div>
-                </div>
-                
-                {/* CTA container */}
-                <div className="bg-teal-700/30 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-teal-500/30 p-4 sm:p-6 md:p-8 mx-auto max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-center">
-                    {t('final-cta.title')}
-                  </h3>
-                  <p className="text-white/90 mb-6 sm:mb-8 text-center max-w-2xl mx-auto text-xs sm:text-sm md:text-base">
-                    {t('final-cta.description')}
-                  </p>
-                  
-                  <div className="flex justify-center">
+                  <div className="flex-shrink-0">
                     <button 
                       onClick={openModal}
-                      className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base bg-white text-teal-700 font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-teal-50 transform hover:-translate-y-1"
+                      className="w-full md:w-auto px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base bg-teal-600 hover:bg-teal-500 transition-colors rounded-lg sm:rounded-xl text-white font-semibold shadow-lg hover:shadow-xl transform duration-300"
                     >
                       {t('conclusion.callToAction')}
                     </button>
@@ -735,6 +688,7 @@ const WhatIsHomeopathy = () => {
             </div>
           </div>
         </section>
+
     </div>
     <ConsultModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
