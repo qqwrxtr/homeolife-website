@@ -455,7 +455,7 @@ const HowIWork = () => {
                                                     )}
 
                                                     {condition.help.note && (
-                                                        <div className="mt-3 sm:mt-4 bg-white p-2 sm:p-3 md:p-4 rounded-lg border-l-4 border-teal-500 ml-6 sm:ml-8 md:ml-9">
+                                                        <div className="mt-3 sm:mt-4 bg-white p-2 sm:p-3 md:p-4 rounded-lg border-l-4 border-teal-500 ml-3 sm:ml-8 md:ml-9">
                                                             <p className="text-xs sm:text-sm text-teal-800 italic">{condition.help.note}</p>
                                                         </div>
                                                     )}
