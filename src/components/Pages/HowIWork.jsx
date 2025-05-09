@@ -290,7 +290,7 @@ const HowIWork = () => {
                                         : 'opacity-95'
                                         }`}
                                 >
-                                    <div className="relative bg-white rounded-xl sm:rounded-2xl shadow-lg p-1 sm:p-5 md:p-6 border border-gray-100">
+                                    <div className="relative bg-white rounded-xl sm:rounded-2xl shadow-lg p-3 sm:p-5 md:p-6 border border-gray-100">
                                         {/* Condition number indicator */}
                                         <div className="absolute -left-2 sm:-left-4 md:-left-6 top-5 sm:top-6 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full bg-teal-600 flex items-center justify-center text-white font-bold text-xs sm:text-sm md:text-base shadow-md">
                                             {index + 1}
@@ -300,7 +300,7 @@ const HowIWork = () => {
                                         <div className="pl-0 sm:pl-8 md:pl-10">
                                             <div className="mb-4 sm:mb-6 flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8">
                                                 <div className="w-full">
-                                                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-800 mb-3 sm:mb-4">{condition.title}</h2>
+                                                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-800 mb-3 sm:mb-4 mt-8 sm:mt-0">{condition.title}</h2>
                                                     <p className="text-sm sm:text-base md:text-lg text-slate-700 mb-4 sm:mb-6 leading-relaxed">{condition.description}</p>
                                                 </div>
                                             </div>
