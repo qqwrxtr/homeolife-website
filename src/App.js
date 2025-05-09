@@ -9,7 +9,7 @@ import './i18n';
 // Import your page components
 import MyApproach from './components/Pages/MyAproach';
 import WhatIsHomeopathy from './components/Pages/WhatIsHomeopathy';
-// import HowIWork from './components/Pages/HowIWork';
+import HowIWork from './components/Pages/HowIWork';
 import Consultations from './components/Pages/Consultations';
 // import UsefulInfo from './components/Pages/UsefulInfo';
 import PrivacyPolicy from './components/Pages/PrivacyPolicy';
@@ -25,10 +25,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/my-approach" element={<MyApproach />} />
           <Route path="/what-is-homeopathy" element={<WhatIsHomeopathy />} />
-          {/* 
-          
           <Route path="/how-i-work" element={<HowIWork />} />
-          <Route path="/usefulInfo" element={<UsefulInfo />} /> */}
+          {/* <Route path="/usefulInfo" element={<UsefulInfo />} /> */}
           <Route path="/consultations" element={<Consultations />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
