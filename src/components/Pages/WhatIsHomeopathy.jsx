@@ -14,6 +14,9 @@ const WhatIsHomeopathy = () => {
   const [activeTab, setActiveTab] = useState('principle1');
   const [isMobile, setIsMobile] = useState(false);
   
+  // Animation state
+  const [isInView, setIsInView] = useState(false);
+  
   // Parallax effect state
   const [offset, setOffset] = useState(0);
   
@@ -25,6 +28,19 @@ const WhatIsHomeopathy = () => {
     'homeopathic-remedies': useRef(null),
     'conclusion': useRef(null)
   };
+
+  // Force animation to play each time the component is loaded/focused
+  useEffect(() => {
+    // First set to false to ensure animation plays
+    setIsInView(false);
+    
+    // Then use a small timeout to trigger the animation
+    const timer = setTimeout(() => {
+      setIsInView(true);
+    }, 50); // Small delay to ensure state changes are separated
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   // Check screen size on mount and resize
   useEffect(() => {
@@ -43,7 +59,6 @@ const WhatIsHomeopathy = () => {
       window.removeEventListener('resize', checkMobile);
     };
   }, []);
-
 
   // Toggle read more sections
   const toggleReadMore = (section) => {
@@ -112,7 +127,7 @@ const WhatIsHomeopathy = () => {
   };
 
   return (
-    <div className="min-h-screen w-full">
+    <div className={`min-h-screen w-full transition-opacity duration-1000 ${isInView ? 'opacity-100' : 'opacity-0'}`}>
       {/* Hero Section with Fixed Background */}
       <section className="relative w-full min-h-[40vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
         {/* Fixed Background */}
@@ -555,33 +570,44 @@ const WhatIsHomeopathy = () => {
                     {t('homeopathic-remedies.usageNote')}
                   </p>
                 </div>
-                
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
-                  <div className="bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-slate-100 text-center">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto bg-teal-100 rounded-full flex items-center justify-center text-teal-600 mb-2 sm:mb-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5 md:w-6 md:h-6">
+                <div className="flex flex-row items-center justify-center flex-wrap gap-2 sm:gap-4 w-full">
+                  <div className="bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-slate-100 text-center flex flex-col items-center">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 mb-2 sm:mb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">
                         <path d="M9 12h.01" />
                         <path d="M15 12h.01" />
                         <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5" />
                         <path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1" />
                       </svg>
                     </div>
-                    <h4 className="font-medium text-slate-800 mb-1 text-xs sm:text-sm md:text-base">{t('homeopathic-remedies.children')}</h4>
+                    <h4 className="font-medium text-slate-800 text-xs sm:text-sm md:text-base w-full truncate">{t('homeopathic-remedies.children')}</h4>
                   </div>
 
-                  <div className="bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-slate-100 text-center">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto bg-teal-100 rounded-full flex items-center justify-center text-teal-600 mb-2 sm:mb-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5 md:w-6 md:h-6">
+                  <div className="bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-slate-100 text-center flex flex-col items-center">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 mb-2 sm:mb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                        <path d="M8 15h8" />
+                        <path d="M8 18h3" />
+                      </svg>
+                    </div>
+                    <h4 className="font-medium text-slate-800 text-xs sm:text-sm md:text-base w-full truncate">{t('homeopathic-remedies.elderly')}</h4>
+                  </div>
+
+                  <div className="bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-slate-100 text-center flex flex-col items-center">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 mb-2 sm:mb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">
                         <circle cx="12" cy="7" r="4"/>
                         <path d="M8 15a4 4 0 0 0-4 4v2h16v-2a4 4 0 0 0-4-4H8z"/>
                       </svg>
                     </div>
-                    <h4 className="font-medium text-slate-800 mb-1 text-xs sm:text-sm md:text-base">{t('homeopathic-remedies.normals')}</h4>
+                    <h4 className="font-medium text-slate-800 text-xs sm:text-sm md:text-base w-full truncate">{t('homeopathic-remedies.normals')}</h4>
                   </div>
                   
-                  <div className="bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-slate-100 text-center">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto bg-teal-100 rounded-full flex items-center justify-center text-teal-600 mb-2 sm:mb-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5 md:w-6 md:h-6">
+                  <div className="bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-slate-100 text-center flex flex-col items-center">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 mb-2 sm:mb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">
                         <path d="M5 9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2Z" />
                         <path d="M12 19v-4" />
                         <path d="M9 15h6" />
@@ -591,20 +617,10 @@ const WhatIsHomeopathy = () => {
                         <path d="M15 4.5a6 6 0 0 1 0 1L12 9" />
                       </svg>
                     </div>
-                    <h4 className="font-medium text-slate-800 mb-1 text-xs sm:text-sm md:text-base">{t('homeopathic-remedies.pregnant')}</h4>
+                    <h4 className="font-medium text-slate-800 text-xs sm:text-sm md:text-base w-full truncate">{t('homeopathic-remedies.pregnant')}</h4>
                   </div>
                   
-                  <div className="bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-sm border border-slate-100 text-center">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto bg-teal-100 rounded-full flex items-center justify-center text-teal-600 mb-2 sm:mb-3">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5 md:w-6 md:h-6">
-                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
-                        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
-                        <path d="M8 15h8" />
-                        <path d="M8 18h3" />
-                      </svg>
-                    </div>
-                    <h4 className="font-medium text-slate-800 mb-1 text-xs sm:text-sm md:text-base">{t('homeopathic-remedies.elderly')}</h4>
-                  </div>
+                  
                 </div>
               </div>
               

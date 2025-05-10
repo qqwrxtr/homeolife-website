@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import HeroVideo from '../assets/hero.mp4';
-import Doctor from '../assets/aaaa.jpg';
+import Doctor from '../assets/doc2.jpg';
 import ConsultModal from './modals/consulte.jsx';
 import telegramIcon from './../assets/telegram-svgrepo-com.svg'
 import instagramIcon from './../assets/instagram-1-svgrepo-com.svg'

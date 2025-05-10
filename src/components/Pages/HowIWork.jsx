@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import ConsultModal from './../modals/consulte.jsx';
+import HeroImage from './../../assets/wjhatgudsa.jpg';
 
 const HowIWork = () => {
     const { t } = useTranslation();
@@ -9,9 +10,41 @@ const HowIWork = () => {
     const [activeSection, setActiveSection] = useState(null);
     const [isInView, setIsInView] = useState(false);
     const [conditions, setConditions] = useState([]);
+    const [isMobile, setIsMobile] = useState(false);
     const containerRef = useRef(null);
     const conditionsRef = useRef({});
     const sectionRefs = useRef({});
+    
+    // Force animation to play each time the component is loaded/focused
+    useEffect(() => {
+        // First set to false to ensure animation plays
+        setIsInView(false);
+        
+        // Then use a small timeout to trigger the animation
+        const timer = setTimeout(() => {
+            setIsInView(true);
+        }, 50); // Small delay to ensure state changes are separated
+        
+        return () => clearTimeout(timer);
+    }, []);
+
+    // Check screen size on mount and resize
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        
+        // Initial check
+        checkMobile();
+        
+        // Add resize listener
+        window.addEventListener('resize', checkMobile);
+        
+        // Cleanup
+        return () => {
+            window.removeEventListener('resize', checkMobile);
+        };
+    }, []);
 
     // Get conditions from translation
     useEffect(() => {
@@ -33,25 +66,6 @@ const HowIWork = () => {
             setActiveCondition(conditionsList[0].id);
         }
     }, [t]);
-
-    // Setup intersection observer for animation
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsInView(true);
-                    observer.disconnect();
-                }
-            },
-            { threshold: 0.1 }
-        );
-
-        if (containerRef.current) {
-            observer.observe(containerRef.current);
-        }
-
-        return () => observer.disconnect();
-    }, []);
 
     // Setup intersection observer for active section tracking
     useEffect(() => {
@@ -212,28 +226,54 @@ const HowIWork = () => {
     return (
         <div
             ref={containerRef}
-            className={`min-h-screen w-full bg-white transition-opacity duration-1000 ${isInView ? 'opacity-100' : 'opacity-100'}`}
+            className={`min-h-screen w-full bg-white transition-opacity duration-1000 ${isInView ? 'opacity-100' : 'opacity-0'}`}
         >
+            {/* Rest of your component remains the same */}
             {/* Hero Section */}
-            <section className="relative w-full py-10 sm:py-12 md:py-16 lg:py-24 bg-gradient-to-b from-teal-600 to-teal-800 text-white overflow-hidden">
-                {/* Decorative circles */}
-                <div className="absolute top-0 right-0 w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full bg-white opacity-10 transform translate-x-1/3 -translate-y-1/2"></div>
-                <div className="absolute bottom-0 left-0 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-white opacity-10 transform -translate-x-1/3 translate-y-1/2"></div>
-
+            <section className="relative w-full min-h-[40vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
+                {/* Background Image */}
+                <div 
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ 
+                        backgroundImage: `url(${HeroImage})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundAttachment: isMobile ? 'scroll' : 'fixed', // Better mobile performance
+                    }}
+                ></div>
+                
+                {/* Dark overlay with gradient */}
+                <div 
+                    className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"
+                    style={{ zIndex: 1 }}
+                ></div>
+                
+                {/* Overlay pattern */}
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px] sm:[background-size:30px_30px] md:[background-size:40px_40px]" style={{ zIndex: 2 }}></div>
+                
                 {/* Content */}
-                <div className="relative z-10 mx-auto px-4 sm:px-6 max-w-7xl text-center">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                        {t('how_i_work.title')}
-                    </h1>
-                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-6 sm:mb-8">
-                        {t('how_i_work.description')}
-                    </p>
-                    <button
-                        onClick={openModal}
-                        className="bg-white text-teal-700 hover:bg-gray-100 font-medium px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-sm sm:text-base"
-                    >
-                        {t('hero.bookConsultation')}
-                    </button>
+                <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 3 }}>
+                    <div className="container max-w-[95vw] sm:max-w-[90vw] px-3 sm:px-4 md:px-6 relative z-10 text-center">
+                        <div className="inline-block mb-4 sm:mb-6 bg-teal-600/30 backdrop-blur-sm px-3 sm:px-6 py-1 sm:py-2 rounded-full text-white/90 text-xs sm:text-sm md:text-base">
+                            {t('how_i_work.title')}
+                        </div>
+                        
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+                            {t('how_i_work.title')}
+                        </h1>
+                        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-6xl mx-auto mb-6 sm:mb-8">
+                            {t('how_i_work.description')}
+                        </p>
+                        
+                        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">              
+                            <button 
+                                onClick={openModal}
+                                className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg bg-white text-teal-700 hover:bg-teal-50 transition-colors rounded-full font-semibold shadow-lg hover:shadow-xl duration-300"
+                            >
+                                {t('hero.bookConsultation')}
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -273,7 +313,6 @@ const HowIWork = () => {
                             </div>
                         </div>
                     </div>
-
                     {/* Main Content */}
                     <div className="lg:w-3/4">
                         <div className="space-y-10 sm:space-y-12 md:space-y-16">
@@ -380,7 +419,7 @@ const HowIWork = () => {
                                                 </div>
                                             )}
 
-                                            {/* Render reasons section if it exists - NO DROPDOWN ANYMORE */}
+                                            {/* Render reasons section if it exists */}
                                             {condition.reasons && (
                                                 <div
                                                     id={`section-${condition.id}-reasons`}
@@ -418,7 +457,7 @@ const HowIWork = () => {
                                                 </div>
                                             )}
 
-                                            {/* Render help section if it exists - NO DROPDOWN ANYMORE */}
+                                            {/* Render help section if it exists */}
                                             {condition.help && (
                                                 <div
                                                     id={`section-${condition.id}-help`}
@@ -462,7 +501,7 @@ const HowIWork = () => {
                                                 </div>
                                             )}
 
-                                            {/* Render children section for Women's and Children's Health - NO DROPDOWN ANYMORE */}
+                                            {/* Render children section for Women's and Children's Health */}
                                             {condition.children && (
                                                 <div
                                                     id={`section-${condition.id}-children`}
@@ -564,7 +603,7 @@ const HowIWork = () => {
                                                 </div>
                                             )}
 
-                                            {/* Render strengths section - NO DROPDOWN ANYMORE */}
+                                            {/* Render strengths section */}
                                             {condition.strengths && (
                                                 <div
                                                     id={`section-${condition.id}-strengths`}
@@ -604,7 +643,7 @@ const HowIWork = () => {
                                                 </div>
                                             )}
 
-                                            {/* Render conditions section for recovery - NO DROPDOWN ANYMORE */}
+                                            {/* Render conditions section for recovery */}
                                             {condition.conditions && (
                                                 <div
                                                     id={`section-${condition.id}-conditions`}
@@ -758,30 +797,30 @@ const HowIWork = () => {
                                                     )}
                                                 </div>
                                             )}
-
                                         </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
-{/* CTA Banner */}
-                                            <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-16 bg-gradient-to-r from-teal-500 to-teal-700 rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 text-white shadow-lg sm:shadow-xl">
-                                                <div className="flex flex-col items-center justify-between">
-                                                    <div className="mb-3 sm:mb-4">
-                                                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 text-center">{t('my-approach.finalCTA.title')}</h3>
-                                                        <p className="text-sm sm:text-base text-white/90 text-center">{t('how_i_work.cta')}</p>
-                                                    </div>
-                                                    <button
-                                                        onClick={openModal}
-                                                        className="bg-white text-teal-700 hover:bg-teal-50 font-medium px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center text-sm sm:text-base"
-                                                    >
-                                                        {t('hero.bookConsultation')}
-                                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 ml-1.5 sm:ml-2" viewBox="0 0 20 20" fill="currentColor">
-                                                            <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                            </div>
+                        
+                        {/* CTA Banner */}
+                        <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-16 bg-gradient-to-r from-teal-500 to-teal-700 rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 text-white shadow-lg sm:shadow-xl">
+                            <div className="flex flex-col items-center justify-between">
+                                <div className="mb-3 sm:mb-4">
+                                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 text-center">{t('my-approach.finalCTA.title')}</h3>
+                                    <p className="text-sm sm:text-base text-white/90 text-center">{t('how_i_work.cta')}</p>
+                                </div>
+                                <button
+                                    onClick={openModal}
+                                    className="bg-white text-teal-700 hover:bg-teal-50 font-medium px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center text-sm sm:text-base"
+                                >
+                                    {t('hero.bookConsultation')}
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 ml-1.5 sm:ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

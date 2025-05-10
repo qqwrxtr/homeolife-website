@@ -1,29 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Primary Meta Tags (Ukrainian) -->
+    <title>Анна Коркач - Сертифікований гомеопат | Гомеопатичні консультації</title>
+    <meta name="title" content="Анна Коркач - Сертифікований гомеопат | Гомеопатичні консультації">
+    <meta name="description" content="Гомеопатичні консультації Анни Коркач - холістичний підхід до здоров'я, що базується на природньому відновленні організму та індивідуальному підході до кожного пацієнта. 10 років досвіду, онлайн-консультації.">
+    <meta name="keywords" content="гомеопатія, гомеопат, натуральна медицина, холістичний підхід, індивідуальне лікування, онлайн консультації, алергія, хронічні захворювання, дитяче здоров'я, Анна Коркач">
+    <meta name="author" content="Анна Коркач">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Ukrainian">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook (Ukrainian) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://domain.com/">
+    <meta property="og:title" content="Анна Коркач - Сертифікований гомеопат з 10-річним досвідом">
+    <meta property="og:description" content="Гомеопатичні консультації для всієї родини. Індивідуальний підхід до здоров'я, що базується на природньому відновленні організму та лікуванні людини, а не діагнозу.">
+    <meta property="og:image" content="%PUBLIC_URL%/logo.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="HomeoLife">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:locale:alternate" content="ru_RU">
+    
+    <!-- Twitter Card (Ukrainian) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://domain.com/">
+    <meta name="twitter:title" content="Анна Коркач - Сертифікований гомеопат з 10-річним досвідом">
+    <meta name="twitter:description" content="Гомеопатичні консультації для всієї родини. Індивідуальний підхід до здоров'я, що базується на природньому відновленні організму та лікуванні людини, а не діагнозу.">
+    <meta name="twitter:image" content="%PUBLIC_URL%/logo.jpg">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://domain.com/">
+    
+    <!-- Favicon and App Icons (React public folder structure) -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!-- Tailwind Play CDN (development) -->
+    <meta name="msapplication-TileColor" content="#6B8E23">
+    <meta name="theme-color" content="#6B8E23">
+    
+    <!-- Font Preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init();
+    
+    <!-- React specific meta tags -->
+    <meta name="theme-color" content="#6B8E23" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- JSON-LD Schema Markup (Ukrainian) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Гомеопатичні консультації Анни Коркач",
+      "url": "https://domain.com",
+      "logo": "https://domain.com/logo.jpg",
+      "description": "Гомеопатичні консультації та лікування, холістичний підхід до здоров'я, що базується на природньому відновленні організму та індивідуальному підході до кожного пацієнта.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Онлайн-консультації по всьому світу"
+      },
+      "telephone": "+380996668866",
+      "email": "homeolifeua@gmail.com",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "priceRange": "₴₴",
+      "founder": {
+        "@type": "Person",
+        "name": "Анна Коркач",
+        "jobTitle": "Сертифікований гомеопат",
+        "description": "Сертифікований гомеопат з 10-річним досвідом, вищою медичною освітою та спеціалізацією в класичній гомеопатії.",
+        "image": "https://domain.com/logo.jpg"
+      },
+      "makesOffer": {
+        "@type": "Offer",
+        "name": "Гомеопатичні консультації",
+        "description": "Індивідуальний підхід до кожного пацієнта, допомога при хронічних захворюваннях, алергії та інших станах.",
+        "price": "3500",
+        "priceCurrency": "UAH",
+        "priceValidUntil": "2025-12-31"
+      }
+    }
     </script>
-  </body>
+    
+    <!-- Organization Schema (Ukrainian) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "HomeoLife",
+      "url": "https://domain.com",
+      "logo": "https://domain.com/logo.jpg",
+      "sameAs": [
+        "https://www.instagram.com/dr_anna_korkach/",
+        "viber://chat?number=380996668866",
+        "https://t.me/annetta00000"
+      ]
+    }
+    </script>
+    
+    <!-- Person Schema for Founder (Ukrainian) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Анна Коркач",
+      "jobTitle": "Сертифікований гомеопат",
+      "description": "Сертифікований гомеопат з 10-річним досвідом роботи",
+      "image": "https://domain.com/logo.jpg",
+      "url": "https://domain.com/",
+      "gender": "Female",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "HomeoLife"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Одеський національний медичний університет"
+      }
+    }
+    </script>
+    
+    <!-- FAQ Schema (Ukrainian) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Що таке гомеопатія?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Гомеопатія (від грец. — «подібна хвороба») — це регулююча терапія, що передбачає вплив на процеси саморегуляції за допомогою препаратів, підібраних індивідуально, з урахуванням реакцій пацієнта. Простіше кажучи, гомеопатія дає організму поштовх і силу для того, щоб він сам відновив своє здоров'я!"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Для кого підходять гомеопатичні препарати?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Через відсутність хімічного навантаження препарати можна використовувати навіть для новонароджених, вагітних жінок і людей похилого віку."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Як проходить гомеопатична консультація?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Первинна консультація триває 1,5-2 години та включає докладний аналіз Вашої історії хвороби, аналіз симптомів, способу життя, психоемоційного стану, складання індивідуального плану відновлення здоров'я, підбір унікального гомеопатичного препарату та рекомендації по способу життя та харчуванню (якщо необхідно)."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Language Alternates (Ukrainian primary) -->
+    <link rel="alternate" hreflang="uk" href="https://domain.com/" />
+    <link rel="alternate" hreflang="ru" href="https://domain.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://domain.com/" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="root"></div>
+    <!-- The React app will be mounted here -->
+</body>
 </html>

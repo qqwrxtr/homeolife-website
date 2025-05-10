@@ -107,7 +107,7 @@ const Footer = () => {
           {/* Column 2: Services / Useful Info */}
           <div>
             <h3 className="text-lg font-medium text-slate-800 mb-4">
-              {t('footer.usefulInfo')}
+              {t('footer.usefullInfo')}
             </h3>
             <ul className="space-y-2">
               <li>

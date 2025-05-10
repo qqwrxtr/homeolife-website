@@ -9,6 +9,22 @@ const Consultations = () => {
   const consultationsRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
   
+  // Animation state
+  const [isInView, setIsInView] = useState(false);
+  
+  // Force animation to play each time the component is loaded/focused
+  useEffect(() => {
+    // First set to false to ensure animation plays
+    setIsInView(false);
+    
+    // Then use a small timeout to trigger the animation
+    const timer = setTimeout(() => {
+      setIsInView(true);
+    }, 50); // Small delay to ensure state changes are separated
+    
+    return () => clearTimeout(timer);
+  }, []);
+  
   // Check screen size on mount and resize
   useEffect(() => {
     const checkMobile = () => {
@@ -36,46 +52,54 @@ const Consultations = () => {
   };
   
   return (
-    <div className="bg-slate-50" id="consultations" ref={consultationsRef}>
-      {/* Hero Section - Modern, Full-width with Overlay */}
-      <div 
-        className="relative py-16 md:py-24 lg:py-32 overflow-hidden" 
-        style={{
-          backgroundImage: `url(${bgHero})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: isMobile ? 'scroll' : 'fixed' // Better mobile performance
-        }}
-      >
+    <div className={`bg-slate-50 transition-opacity duration-1000 ${isInView ? 'opacity-100' : 'opacity-0'}`} id="consultations" ref={consultationsRef}>
+      {/* Hero Section with Styling Matching Other Components */}
+      <section className="relative w-full min-h-[40vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: `url(${bgHero})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: isMobile ? 'scroll' : 'fixed', // Better mobile performance
+          }}
+        ></div>
+        
         {/* Dark overlay with gradient */}
         <div 
           className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"
           style={{ zIndex: 1 }}
         ></div>
         
-        <div className="container mx-auto px-4 sm:px-6 max-w-[95vw] md:max-w-[90vw] relative z-10 flex flex-col items-center justify-center text-center min-h-[400px] md:min-h-[500px]">
-          <h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 drop-shadow-md"
-          >
-            {t('consultations.title')}
-          </h1>
-          <p 
-            className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8 md:mb-10 leading-relaxed"
-          >
-            {t('consultations.subtitle')}
-          </p>
-          <button 
-            onClick={openModal}
-            className="bg-teal-500 text-white hover:bg-teal-600 font-medium px-6 sm:px-8 py-3 md:py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-base sm:text-lg flex items-center"
-            aria-label={t('hero.bookConsultation')}
-          >
-            {t('hero.bookConsultation')}
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
-          </button>
+        {/* Overlay pattern */}
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px] sm:[background-size:30px_30px] md:[background-size:40px_40px]" style={{ zIndex: 2 }}></div>
+        
+        {/* Content */}
+        <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 3 }}>
+          <div className="container max-w-[95vw] sm:max-w-[90vw] px-3 sm:px-4 md:px-6 relative z-10 text-center">
+            <div className="inline-block mb-4 sm:mb-6 bg-teal-600/30 backdrop-blur-sm px-3 sm:px-6 py-1 sm:py-2 rounded-full text-white/90 text-xs sm:text-sm md:text-base">
+              {t('consultations.title')}
+            </div>
+            
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+              {t('consultations.title')}
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-6xl mx-auto mb-6 sm:mb-8">
+              {t('consultations.subtitle')}
+            </p>
+            
+            <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">              
+              <button 
+                onClick={openModal}
+                className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg bg-white text-teal-700 hover:bg-teal-50 transition-colors rounded-full font-semibold shadow-lg hover:shadow-xl duration-300"
+              >
+                {t('hero.bookConsultation')}
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Content Container */}
       <div className="max-w-[95vw] sm:max-w-[90vw] mx-auto">

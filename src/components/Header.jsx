@@ -95,7 +95,7 @@ const Header = () => {
         ${isScrolled ? 'py-1 md:py-2' : 'py-1 md:py-2'}`}
     >
       {/* Logo and Main Navigation */}
-      <div className="xl:container mx-auto px-3 sm:px-4">
+      <div className="max-w-[90vw] mx-auto px-3 md:px-0">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group">
@@ -125,24 +125,23 @@ const Header = () => {
                 </Link>
               </li>
               <li ref={dropdownRef} className="relative group">
-                <Link 
-                  to="/usefulInfo"
+                <a
                   className="text-slate-700 hover:text-slate-900 transition-colors duration-300 pb-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-500 after:transition-all after:duration-300 hover:after:w-full flex items-center cursor-pointer"
                   onClick={toggleDropdown}
                   aria-expanded={isDropdownOpen}
                   aria-haspopup="true"
                 >
-                  {t('navigation.usefulInfo')}
+                  {t('navigation.usefullInfo')}
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
-                    className={`h-3 w-3 md:h-4 md:w-4 ml-1 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                    className={`h-3 w-3 md:h-4 md:w-4 ml-1 transition-transform duration-300 group-hover:rotate-180 ${isDropdownOpen ? 'rotate-180' : ''}`}
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
-                </Link>
+                </a>
                 
                 {/* Desktop Dropdown - Shows on hover or click */}
                 <div 
@@ -163,10 +162,16 @@ const Header = () => {
                       {t('dropdown.whatIsHomeopathy')}
                     </Link>
                     <Link 
-                      to="/how-i-work" 
+                      to="/howIwork" 
                       className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-all duration-200"
                     >
                       {t('dropdown.howIWork')}
+                    </Link>
+                    <Link
+                      to="/usefullInfo"
+                      className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-all duration-200"
+                    >
+                      {t('navigation.usefullInfo')}
                     </Link>
                   </div>
                 </div>
@@ -257,14 +262,14 @@ const Header = () => {
             </li>
             <li>
               <Link 
-                to="/usefulInfo" 
+                to="/usefullInfo" 
                 className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                {t('navigation.usefulInfo')}
+                {t('navigation.usefullInfo')}
               </Link>
             </li>
             <li>
@@ -293,7 +298,7 @@ const Header = () => {
             </li>
             <li>
               <Link 
-                to="/how-i-work" 
+                to="/howIwork" 
                 className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
