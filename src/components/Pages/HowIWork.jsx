@@ -628,7 +628,7 @@ const HowIWork = () => {
                                                                         <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mt-0.5 mr-2 sm:mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                                                                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                                                         </svg>
-                                                                        <span className="text-xs sm:text-sm md:text-base text-green-900">{item}</span>
+                                                                        <span className="text-xs sm:text-sm md:text-base text-green-900 text-start">{item}</span>
                                                                     </li>
                                                                 ))}
                                                             </ul>
@@ -710,7 +710,7 @@ const HowIWork = () => {
                                                                                 <svg className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600 mt-0.5 mr-2 sm:mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                                                                                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                                                                 </svg>
-                                                                                <span className="text-xs sm:text-sm md:text-base text-indigo-900">{item}</span>
+                                                                                <span className="text-xs sm:text-sm md:text-base text-indigo-900 text-start">{item}</span>
                                                                             </li>
                                                                         ))}
                                                                     </ul>

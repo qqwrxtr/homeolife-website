@@ -117,11 +117,11 @@ const UsefulInfo = () => {
         <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 3 }}>
           <div className="container max-w-[95vw] sm:max-w-[90vw] px-3 sm:px-4 md:px-6 relative z-10 text-center">
             <div className="inline-block mb-4 sm:mb-6 bg-teal-600/30 backdrop-blur-sm px-3 sm:px-6 py-1 sm:py-2 rounded-full text-white/90 text-xs sm:text-sm md:text-base">
-              {t("usefullInfo.title")}
+              {t("dropdown.lol")}
             </div>
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-              {t("usefullInfo.title")}
+              {t("dropdown.lol")}
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-6xl mx-auto mb-6 sm:mb-8">
               {t("usefullInfo.subtitle")}
