@@ -144,15 +144,15 @@ const Blog_8 = () => {
                 
                 {/* Section 1 */}
                 <div className="bg-white rounded-lg sm:rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6 md:p-8 mb-6 sm:mb-8">
-                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 mb-3 sm:mb-5" id="section-1">
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 mb-3 sm:mb-5 font-bold" id="section-1">
                     {t("usefullInfo.blog_8.sections.0.title")}
                   </h2>
-                  <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-4 sm:mb-5">{t("usefullInfo.blog_8.sections.0.content")}</p>
+                  <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-4 sm:mb-5 ">{t("usefullInfo.blog_8.sections.0.content")}</p>
                   
                   <div className="space-y-3 sm:space-y-4">
                     {[0, 1, 2, 3, 4, 5, 6].map((index) => (
                       <div key={index} className="bg-slate-50 p-3 sm:p-4 rounded-lg border border-slate-200">
-                        <h3 className="font-medium text-base text-slate-800 mb-1">{t(`usefullInfo.blog_8.sections.0.causes.${index}.name`)}</h3>
+                        <h3 className=" text-base text-slate-800 mb-1 font-bold">{t(`usefullInfo.blog_8.sections.0.causes.${index}.name`)}</h3>
                         <p className="text-sm sm:text-base text-slate-700">{t(`usefullInfo.blog_8.sections.0.causes.${index}.description`)}</p>
                       </div>
                     ))}
@@ -161,7 +161,7 @@ const Blog_8 = () => {
                 
                 {/* Section 2 */}
                 <div className="bg-white rounded-lg sm:rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6 md:p-8 mb-6 sm:mb-8">
-                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 mb-3 sm:mb-5" id="section-2">
+                  <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-800 mb-3 sm:mb-5 " id="section-2">
                     {t("usefullInfo.blog_8.sections.1.title")}
                   </h2>
                   <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-4 sm:mb-5">{t("usefullInfo.blog_8.sections.1.content")}</p>
@@ -344,28 +344,6 @@ const Blog_8 = () => {
                           </span>
                           <span className="line-clamp-1">
                             {t("usefullInfo.blog_8.sections.3.title")}
-                          </span>
-                        </a>
-                      </li>
-                      <li className="pb-1 sm:pb-2">
-                        <a 
-                          href="#section-5" 
-                          className={`flex items-center hover:text-teal-600 transition-colors duration-200 ${
-                            activeSection === 5 ? 'text-teal-600 font-medium' : 'text-slate-700'
-                          }`}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            document.getElementById('section-5').scrollIntoView({ behavior: 'smooth' });
-                            setActiveSection(5);
-                          }}
-                        >
-                          <span className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full text-[10px] sm:text-xs flex items-center justify-center mr-1 sm:mr-2 flex-shrink-0 ${
-                            activeSection === 5 ? 'bg-teal-500 text-white' : 'bg-teal-100 text-teal-700'
-                          }`}>
-                            5
-                          </span>
-                          <span className="line-clamp-1">
-                            Висновок
                           </span>
                         </a>
                       </li>
