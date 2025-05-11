@@ -54,7 +54,7 @@ const Consultations = () => {
   return (
     <div className={`bg-slate-50 transition-opacity duration-1000 ${isInView ? 'opacity-100' : 'opacity-0'}`} id="consultations" ref={consultationsRef}>
       {/* Hero Section with Styling Matching Other Components */}
-      <section className="relative w-full min-h-[40vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
+      <section className="relative w-full min-h-[50vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -429,7 +429,7 @@ const Consultations = () => {
                   <div className="w-16 md:w-24 h-1 bg-white/30 mx-auto"></div>
                 </div>
                 
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 sm:p-10">
+                <div className="sm:bg-white/10 sm:backdrop-blur-sm sm:rounded-xl sm:p-6 sm:p-10">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
                     <div 
                       className="text-center lg:text-left"

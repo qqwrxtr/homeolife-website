@@ -58,7 +58,7 @@ const MyApproach = () => {
       className={`relative bg-white w-full min-h-screen transition-opacity duration-1000 ${isInView ? 'opacity-100' : 'opacity-0'}`}
     >
       {/* Hero Section with consistent styling */}
-      <section className="relative w-full min-h-[40vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
+      <section className="relative w-full min-h-[50vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -106,7 +106,7 @@ const MyApproach = () => {
               </div>
               
               {/* Doctor Image - Keeping this as per requirement */}
-              <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
+              <div className="hidden sm:flex md:w-1/2 flex justify-center mt-8 md:mt-0">
                 <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl transform hover:scale-105 transition-transform duration-500">
                   <img
                     src={doctorImage}
@@ -234,7 +234,7 @@ const MyApproach = () => {
             </div>
             
             {/* Right Visual Element */}
-            <div className="lg:w-1/2 flex justify-center w-full mt-8 lg:mt-0">
+            <div className="hidden md:block lg:w-1/2 flex justify-center w-full mt-8 lg:mt-0">
               <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
                 <div className="aspect-square relative rounded-full overflow-hidden border-8 border-teal-100 shadow-lg">
                   <div className="absolute inset-8 rounded-full bg-gradient-to-br from-teal-500 to-emerald-400 animate-pulse" />

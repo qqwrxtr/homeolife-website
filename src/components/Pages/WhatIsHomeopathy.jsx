@@ -129,7 +129,7 @@ const WhatIsHomeopathy = () => {
   return (
     <div className={`min-h-screen w-full transition-opacity duration-1000 ${isInView ? 'opacity-100' : 'opacity-0'}`}>
       {/* Hero Section with Fixed Background */}
-      <section className="relative w-full min-h-[40vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
+      <section className="relative w-full min-h-[50vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
         {/* Fixed Background */}
         <div 
           className="absolute inset-0 bg-cover bg-center"

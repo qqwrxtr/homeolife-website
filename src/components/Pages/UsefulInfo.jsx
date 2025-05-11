@@ -92,7 +92,7 @@ const UsefulInfo = () => {
       className={`relative min-h-screen bg-slate-50 transition-opacity text-start duration-1000 ${isInView ? 'opacity-100' : 'opacity-0'}`}
     >
       {/* Hero Section with consistent styling */}
-      <section className="relative w-full min-h-[40vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
+      <section className="relative w-full min-h-[50vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"

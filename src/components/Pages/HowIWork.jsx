@@ -230,7 +230,7 @@ const HowIWork = () => {
         >
             {/* Rest of your component remains the same */}
             {/* Hero Section */}
-            <section className="relative w-full min-h-[40vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
+            <section className="relative w-full min-h-[50vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
                 {/* Background Image */}
                 <div 
                     className="absolute inset-0 bg-cover bg-center"
