@@ -206,7 +206,7 @@ const CombinedHeroAbout = () => {
                   />
                 </div>
                 {/* Experience Badge */}
-                <div className="absolute top-8 -right-4 md:-right-8 bg-teal-600 text-white py-3 px-6 rounded-md shadow-lg z-20">
+                <div className="absolute top-3 lg:top-8 right-2 lg:-right-8 bg-teal-600 text-white py-2 lg:py-3 px-3 md:px-6 rounded-md shadow-lg z-20">
                   <span className="text-sm md:text-base font-medium">10 {t('about.yearsExperience', 'лет опыта')}</span>
                 </div>
               </div>
