@@ -469,7 +469,7 @@ const Consultations = () => {
                     </div>
                     
                     <div 
-                      className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm p-6 md:p-8 rounded-xl border border-white/20"
+                      className="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm p-6 md:p-8 rounded-xl border border-white/20 flex justify-center flex-col"
                     >
                       <p className="text-base md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed">
                         {t('consultations.conclusion.description')}
