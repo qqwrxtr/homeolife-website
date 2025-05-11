@@ -74,11 +74,17 @@ const Blog_1 = () => {
     };
   }, [isInView]); // Only setup after page animation completes
 
-  // Format date for display
   const formatDate = (dateString) => {
+    // read your stored language code
+    const code = localStorage.getItem('i18nextLng') || 'ru';
+    const LOCALE_MAP = { ru: 'ru-RU', ua: 'uk-UA' };
+    const locale = LOCALE_MAP[code] || LOCALE_MAP.ru;
+
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('ru-RU', options);
+    return new Date(dateString).toLocaleDateString(locale, options);
   };
+
+
 
   return (
     <div 
@@ -422,31 +428,6 @@ const Blog_1 = () => {
                           </span>
                           <span className="line-clamp-1">
                             {t("usefullInfo.blog_1.conclusion.title")}
-                          </span>
-                        </a>
-                      </li>
-                      <li className="pb-1 sm:pb-2">
-                        <a 
-                          href="#section-6" 
-                          className={`flex items-center hover:text-teal-600 transition-colors duration-200 ${
-                            activeSection === 6 ? 'text-teal-600 font-medium' : 'text-slate-700'
-                          }`}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            const element = document.getElementById('section-6');
-                            if (element) {
-                              element.scrollIntoView({ behavior: 'smooth' });
-                              setActiveSection(6);
-                            }
-                          }}
-                        >
-                          <span className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full text-[10px] sm:text-xs flex items-center justify-center mr-1 sm:mr-2 flex-shrink-0 ${
-                            activeSection === 6 ? 'bg-teal-500 text-white' : 'bg-teal-100 text-teal-700'
-                          }`}>
-                            6
-                          </span>
-                          <span className="line-clamp-1">
-                            Итог
                           </span>
                         </a>
                       </li>

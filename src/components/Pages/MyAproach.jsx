@@ -414,7 +414,7 @@ const MyApproach = () => {
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-teal-400 mr-2 sm:mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
-                      <span className="text-sm sm:text-base">{t('my-approach.individualApproach.bullet3')}</span>
+                      <span className="text-sm sm:text-base">{t('my-approach.individualApproach.bullet4')}</span>
                     </li>
                   </ul>
                 </div>

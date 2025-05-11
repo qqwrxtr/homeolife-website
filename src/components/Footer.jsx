@@ -128,7 +128,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/how-i-work" 
+                  to="/howIwork" 
                   className="text-slate-600 hover:text-teal-600 transition-colors duration-300 text-sm"
                 >
                   {t('dropdown.howIWork')}

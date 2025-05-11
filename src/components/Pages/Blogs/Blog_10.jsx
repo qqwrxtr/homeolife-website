@@ -212,32 +212,6 @@ const Blog_10 = () => {
                     <div className="bg-gradient-to-r from-white via-green-50 to-white p-4 sm:p-5 border border-slate-200 rounded-lg">
                       <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{t("usefullInfo.blog_10.sections.2.content")}</p>
                     </div>
-                    
-                    <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4">
-                      <div className="bg-slate-50 p-3 sm:p-4 rounded-lg border border-slate-200 flex-1">
-                        <div className="flex items-center gap-2 sm:gap-3 mb-2">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                          </svg>
-                          <span className="font-medium text-slate-800">Бактерии</span>
-                        </div>
-                        <p className="text-xs sm:text-sm text-slate-600">
-                          Продукты жизнедеятельности патогенных бактерий — основной источник пирогенов.
-                        </p>
-                      </div>
-                      
-                      <div className="bg-slate-50 p-3 sm:p-4 rounded-lg border border-slate-200 flex-1">
-                        <div className="flex items-center gap-2 sm:gap-3 mb-2">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                          </svg>
-                          <span className="font-medium text-slate-800">Токсины</span>
-                        </div>
-                        <p className="text-xs sm:text-sm text-slate-600">
-                          Различные токсины также могут стимулировать гипоталамус к повышению температуры.
-                        </p>
-                      </div>
-                    </div>
                   </div>
                 </div>
                 
@@ -327,18 +301,6 @@ const Blog_10 = () => {
                   
                   <div className="bg-gradient-to-r from-teal-50 to-white p-4 sm:p-5 rounded-lg border border-teal-100">
                     <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-4 sm:mb-5">{t("usefullInfo.blog_10.sections.5.content")}</p>
-                    
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                      <div className="bg-white p-3 sm:p-4 rounded-lg border border-slate-200 flex-1 shadow-sm">
-                        <p className="text-sm font-medium text-teal-600 mb-1">Belladonna</p>
-                        <p className="text-xs sm:text-sm text-slate-600">Применяется при резком повышении температуры, покраснении кожи, пульсирующей головной боли</p>
-                      </div>
-                      
-                      <div className="bg-white p-3 sm:p-4 rounded-lg border border-slate-200 flex-1 shadow-sm">
-                        <p className="text-sm font-medium text-teal-600 mb-1">Aconitum</p>
-                        <p className="text-xs sm:text-sm text-slate-600">Эффективен при высокой температуре с ознобом, сухости кожи и беспокойстве</p>
-                      </div>
-                    </div>
                   </div>
                 </div>
                 

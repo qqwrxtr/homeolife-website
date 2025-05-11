@@ -241,7 +241,7 @@ const Blog_2 = () => {
                   
                   <div className="space-y-6 sm:space-y-8">
                     <div className="space-y-3 sm:space-y-4">
-                      <h3 className="text-base sm:text-lg font-semibold text-slate-800 border-b border-slate-200 pb-2">Не рекомендуется:</h3>
+                      <h3 className="text-base sm:text-lg font-semibold text-slate-800 border-b border-slate-200 pb-2">{t('DoNotRecomends')}</h3>
                       {[0, 1].map((index) => (
                         <div key={index} className="flex items-start px-2 sm:px-4">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-slate-500 mr-2 sm:mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
@@ -253,7 +253,7 @@ const Blog_2 = () => {
                     </div>
                     
                     <div className="space-y-3 sm:space-y-4">
-                      <h3 className="text-base sm:text-lg font-semibold text-teal-700 border-b border-slate-200 pb-2">Рекомендуется:</h3>
+                      <h3 className="text-base sm:text-lg font-semibold text-teal-700 border-b border-slate-200 pb-2">{t('Recomends')}</h3>
                       {[0, 1].map((index) => (
                         <div key={index} className="flex items-start px-2 sm:px-4">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-teal-500 mr-2 sm:mr-3 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
@@ -296,7 +296,7 @@ const Blog_2 = () => {
                     <div className="p-3 sm:p-5">
                       <p className="mb-4 sm:mb-5 text-sm sm:text-base text-slate-700 leading-relaxed">{t("usefullInfo.blog_2.sections.7.content")}</p>
                       
-                      <h4 className="font-semibold text-slate-800 mb-2 sm:mb-3 border-b border-teal-100 pb-1">Запомните:</h4>
+                      <h4 className="font-semibold text-slate-800 mb-2 sm:mb-3 border-b border-teal-100 pb-1">{t('Remember')}</h4>
                       <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-5">
                         {[0, 1, 2].map((index) => (
                           <p key={index} className="text-sm sm:text-base text-slate-700 pl-4 sm:pl-5 relative before:absolute before:left-0 before:top-1.5 before:w-2 before:h-2 before:bg-teal-500 before:rounded-full">
@@ -305,7 +305,7 @@ const Blog_2 = () => {
                         ))}
                       </div>
                       
-                      <h4 className="font-semibold text-slate-800 mb-2 sm:mb-3 border-b border-teal-100 pb-1">Советы:</h4>
+                      <h4 className="font-semibold text-slate-800 mb-2 sm:mb-3 border-b border-teal-100 pb-1">{t('Soveti')}</h4>
                       <div className="space-y-2 sm:space-y-3">
                         {[0, 1].map((index) => (
                           <p key={index} className="text-sm sm:text-base text-slate-700 pl-4 sm:pl-5 relative before:absolute before:left-0 before:top-1.5 before:w-2 before:h-2 before:bg-teal-500 before:rounded-full">
