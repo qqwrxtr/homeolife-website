@@ -75,9 +75,14 @@ const Blog_3 = () => {
   }, [isInView]); // Only setup after page animation completes
 
   // Format date for display
-  const formatDate = (dateString) => {
+    const formatDate = (dateString) => {
+    // read your stored language code
+    const code = localStorage.getItem('i18nextLng') || 'ru';
+    const LOCALE_MAP = { ru: 'ru-RU', ua: 'uk-UA' };
+    const locale = LOCALE_MAP[code] || LOCALE_MAP.ru;
+
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('ru-RU', options);
+    return new Date(dateString).toLocaleDateString(locale, options);
   };
 
   return (

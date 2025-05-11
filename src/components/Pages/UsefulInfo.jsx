@@ -452,7 +452,7 @@ const UsefulInfo = () => {
               >
                 <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
                   <img 
-                    src={placeholders[9]} 
+                    src={placeholders[8]} 
                     alt={t("usefullInfo.blog_10.title")}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -556,7 +556,7 @@ const UsefulInfo = () => {
                     </div>
                     <div className="sm:col-span-2 h-48 sm:h-full overflow-hidden order-1 sm:order-2">
                     <img 
-                        src={placeholders[8]} 
+                        src={placeholders[9]} 
                         alt={t("usefullInfo.blog_9.title")}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
