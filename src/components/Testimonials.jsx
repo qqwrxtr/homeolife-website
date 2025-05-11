@@ -38,11 +38,10 @@ const TestimonialsPreview = () => {
 
   // Setup autoplay
   useEffect(() => {
+    goToNext();
     startAutoplayTimer();
-    return () => {
-      clearTimeout(autoplayTimerRef.current);
-    };
-  }, [activeIndex, testimonials.length]);
+    return () => clearTimeout(autoplayTimerRef.current);
+  }, []);
 
   const startAutoplayTimer = () => {
     clearTimeout(autoplayTimerRef.current);
