@@ -361,7 +361,7 @@ const CombinedHeroAbout = () => {
 
                   {/* Viber */}
                   <a
-                    href="viber://chat/?number=%2B380996668866"
+                    href="viber://chat?number=+380996668866"
                     className="text-slate-600 hover:text-teal-600 transition-colors duration-300"
                   >
                     <img src={viberIcon} alt="" className='w-8 h-8 hover:scale-105 transition transition-all duration-300'/>
