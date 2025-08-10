@@ -3,9 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import ConsultModal from './../../modals/consulte.jsx';
 import blog_1 from '../../../assets/blog_1.jpeg';
+import { useLanguagePrefix } from '../../../hooks/useLanguagePrefix';
 
 const Blog_1 = () => {
   const { t } = useTranslation();
+  const { getLocalizedPath } = useLanguagePrefix();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const [activeSection, setActiveSection] = useState(1);
@@ -477,7 +479,7 @@ const Blog_1 = () => {
           
           {/* Back to Blog Link */}
           <div className="mt-6 sm:mt-8 md:mt-10 text-center">
-            <Link to="/usefullInfo" className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm sm:text-base">
+            <Link to={getLocalizedPath('usefullInfo')} className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm sm:text-base">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
               </svg>

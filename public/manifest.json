@@ -1,6 +1,7 @@
 {
   "short_name": "HomeoLife",
-  "name": "HomeoLife - Гомеопатичні консультації Анни Коркач",
+  "name": "HomeoLife - Класична гомеопатія з Анною Коркач",
+  "description": "Професійна класична гомеопатія в Україні. Консультації досвідченого гомеопата з індивідуальним підходом.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -15,21 +16,47 @@
     },
     {
       "src": "logo.jpg",
-      "type": "image/jpeg",
+      "type": "image/jpeg", 
       "sizes": "512x512",
       "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/ua/",
   "scope": "/",
   "display": "standalone",
-  "orientation": "portrait",
-  "theme_color": "#6B8E23",
-  "background_color": "#F9F9F9",
-  "description": "Гомеопатичні консультації та лікування, холістичний підхід до здоров'я",
+  "orientation": "portrait-primary",
+  "theme_color": "#0F766E",
+  "background_color": "#FFFFFF",
   "dir": "ltr",
   "lang": "uk",
-  "categories": ["health", "medical", "homeopathy"],
+  "categories": ["health", "medical", "homeopathy", "alternative-medicine"],
+  "shortcuts": [
+    {
+      "name": "Консультації",
+      "short_name": "Консультації",
+      "description": "Записатися на консультацію",
+      "url": "/ua/consultations",
+      "icons": [{"src": "logo.jpg", "sizes": "192x192"}]
+    },
+    {
+      "name": "Корисна інформація",
+      "short_name": "Інфо",
+      "description": "Корисна інформація про здоров'я",
+      "url": "/ua/usefullInfo",
+      "icons": [{"src": "logo.jpg", "sizes": "192x192"}]
+    }
+  ],
   "related_applications": [],
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "screenshots": [
+    {
+      "src": "logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    }
+  ]
 }

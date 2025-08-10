@@ -1,5 +1,39 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemaps
+Sitemap: https://homeolife.com.ua/sitemap.xml
+
+# Specific language versions for better crawling
+Allow: /ua/
+Allow: /ru/
+
+# Disallow any old paths that might exist
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_*
+
+# Crawl-delay (optional - remove if not needed)
+# Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
 
 Sitemap: https://homeolife.com.ua/sitemap.xml

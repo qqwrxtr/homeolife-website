@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { SEOHelmet } from '../SEOHelmet';
 
 import CombinedHeroAbout from '.././CombineHeroAbout';
 import ContactForm from '.././/ContactForm';
@@ -8,6 +10,7 @@ import HomeopathyBenefitsTable from '.././HomeopathyBenefitsTable';
 import TestimonialsPreview from '.././Testimonials';
 
 function Home() {
+  const { t } = useTranslation();
 
   const location = useLocation();
   
@@ -44,6 +47,11 @@ function Home() {
 
   return (
     <div>
+      <SEOHelmet 
+        title={t('seo.home.title')}
+        description={t('seo.home.description')}
+        keywords={t('seo.home.keywords')}
+      />
       <CombinedHeroAbout/>
       <HomeopathyBenefitsTable />
       <div id='reviews'>

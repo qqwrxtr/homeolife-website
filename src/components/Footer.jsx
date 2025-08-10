@@ -6,9 +6,11 @@ import instagramIcon from '../assets/instagram-1-svgrepo-com.svg';
 import viberIcon from '../assets/viber-svgrepo-com.svg';
 import gmailIcon from '../assets/gmail-svgrepo-com.svg';
 import callIcon from '../assets/call-medicine-rounded-svgrepo-com.svg';
+import { useLanguagePrefix } from '../hooks/useLanguagePrefix';
 
 const Footer = () => {
   const { t } = useTranslation();
+  const { getLocalizedPath } = useLanguagePrefix();
   const currentYear = new Date().getFullYear();
   const location = useLocation();
   const navigate = useNavigate();
@@ -17,7 +19,10 @@ const Footer = () => {
   const handleSectionNavigation = (sectionId, event) => {
     event.preventDefault();
     
-    if (location.pathname === '/') {
+    const currentPath = location.pathname;
+    const isOnHomePage = currentPath.endsWith('/') || currentPath.match(/^\/[a-z]{2}$/);
+    
+    if (isOnHomePage) {
       // If on home page, scroll directly
       const section = document.getElementById(sectionId);
       if (section) {
@@ -28,7 +33,7 @@ const Footer = () => {
       }
     } else {
       // If not on home page, navigate to home with hash
-      navigate(`/#${sectionId}`);
+      navigate(`${getLocalizedPath('')}#${sectionId}`);
     }
   };
 

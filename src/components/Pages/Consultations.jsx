@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { SEOHelmet } from '../SEOHelmet';
 import ConsultModal from '.././modals/consulte.jsx';
 import bgHero from './../../assets/123321.jpg';
 
@@ -53,6 +54,11 @@ const Consultations = () => {
   
   return (
     <div className={`bg-slate-50 transition-opacity duration-1000 ${isInView ? 'opacity-100' : 'opacity-0'}`} id="consultations" ref={consultationsRef}>
+      <SEOHelmet 
+        title={t('seo.consultations.title')}
+        description={t('seo.consultations.description')}
+        keywords={t('seo.consultations.keywords')}
+      />
       {/* Hero Section with Styling Matching Other Components */}
       <section className="relative w-full min-h-[50vh] md:min-h-[50vh] lg:min-h-[60vh] overflow-hidden bg-teal-800 text-white">
         {/* Background Image */}

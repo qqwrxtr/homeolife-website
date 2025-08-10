@@ -4,9 +4,11 @@ import { useTranslation } from 'react-i18next';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 import LanguageSwitcher from './LanguageSwitcher/LanguageSwitcher';
+import { useLanguagePrefix } from '../hooks/useLanguagePrefix';
 
 const Header = () => {
   const { t } = useTranslation();
+  const { getLocalizedPath } = useLanguagePrefix();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +29,10 @@ const Header = () => {
    const handleSectionNavigation = (sectionId, event) => {
     event.preventDefault();
     
-    if (location.pathname === '/') {
+    const currentPath = location.pathname;
+    const isOnHomePage = currentPath.endsWith('/') || currentPath.match(/^\/[a-z]{2}$/);
+    
+    if (isOnHomePage) {
       // If on home page, scroll directly
       const section = document.getElementById(sectionId);
       if (section) {
@@ -38,7 +43,7 @@ const Header = () => {
       }
     } else {
       // If not on home page, navigate to home with hash
-      navigate(`/#${sectionId}`);
+      navigate(`${getLocalizedPath('')}#${sectionId}`);
     }
     
     // Close mobile menu if open
@@ -98,7 +103,7 @@ const Header = () => {
       <div className="max-w-[90vw] mx-auto px-3 md:px-0">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group">
+          <Link to={getLocalizedPath('')} className="flex items-center space-x-2 sm:space-x-3 group">
             <div className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 border border-slate-200 rounded-md overflow-hidden transition-all duration-300 ease-in-out group-hover:shadow-md ${isScrolled ? 'scale-95' : ''}`}>
               <img 
                 src={logo} 
@@ -115,12 +120,12 @@ const Header = () => {
           <nav className="hidden lg:block">
             <ul className="flex space-x-5 xl:space-x-8 text-sm md:text-base">
               <li>
-                <Link to="/" className="text-slate-700 hover:text-slate-900 transition-colors duration-300 pb-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-500 after:transition-all after:duration-300 hover:after:w-full">
+                <Link to={getLocalizedPath('')} className="text-slate-700 hover:text-slate-900 transition-colors duration-300 pb-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-500 after:transition-all after:duration-300 hover:after:w-full">
                   {t('navigation.home')}
                 </Link>
               </li>
               <li>
-                <Link to="/consultations" className="text-slate-700 hover:text-slate-900 transition-colors duration-300 pb-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-500 after:transition-all after:duration-300 hover:after:w-full">
+                <Link to={getLocalizedPath('consultations')} className="text-slate-700 hover:text-slate-900 transition-colors duration-300 pb-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal-500 after:transition-all after:duration-300 hover:after:w-full">
                   {t('navigation.consultations')}
                 </Link>
               </li>
@@ -150,25 +155,25 @@ const Header = () => {
                     ${isDropdownOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
                   <div className="py-1 rounded-md overflow-hidden">
                     <Link 
-                      to="/my-approach" 
+                      to={getLocalizedPath('my-approach')} 
                       className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-all duration-200"
                     >
                       {t('dropdown.myApproach')}
                     </Link>
                     <Link 
-                      to="/what-is-homeopathy" 
+                      to={getLocalizedPath('what-is-homeopathy')} 
                       className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-all duration-200"
                     >
                       {t('dropdown.whatIsHomeopathy')}
                     </Link>
                     <Link 
-                      to="/howIwork" 
+                      to={getLocalizedPath('howIwork')} 
                       className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-all duration-200"
                     >
                       {t('dropdown.howIWork')}
                     </Link>
                     <Link
-                      to="/usefullInfo"
+                      to={getLocalizedPath('usefullInfo')}
                       className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-all duration-200"
                     >
                       {t('dropdown.lol')}
@@ -238,7 +243,7 @@ const Header = () => {
           <ul className="flex flex-col divide-y divide-slate-100">
             <li>
               <Link 
-                to="/" 
+                to={getLocalizedPath('')} 
                 className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -250,7 +255,7 @@ const Header = () => {
             </li>
             <li>
               <Link 
-                to="/consultations" 
+                to={getLocalizedPath('consultations')} 
                 className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -262,7 +267,7 @@ const Header = () => {
             </li>
             <li>
               <Link 
-                to="/usefullInfo" 
+                to={getLocalizedPath('usefullInfo')} 
                 className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -274,7 +279,7 @@ const Header = () => {
             </li>
             <li>
               <Link 
-                to="/my-approach" 
+                to={getLocalizedPath('my-approach')} 
                 className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -286,7 +291,7 @@ const Header = () => {
             </li>
             <li>
               <Link 
-                to="/what-is-homeopathy" 
+                to={getLocalizedPath('what-is-homeopathy')} 
                 className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -298,7 +303,7 @@ const Header = () => {
             </li>
             <li>
               <Link 
-                to="/howIwork" 
+                to={getLocalizedPath('howIwork')} 
                 className="flex items-center py-3 text-sm text-slate-700 hover:text-teal-600 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >

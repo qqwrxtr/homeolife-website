@@ -1,6 +1,5 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 
 import translationsInRussian from './language/ru.json';
 import translationsInUkrainian from './language/ua.json';
@@ -10,24 +9,38 @@ const resources = {
   ru: { translation: translationsInRussian },
 };
 
-// pull from localStorage or default to UA
-const savedLng = localStorage.getItem('i18nextLng') || 'ua';
+// Custom language detector that reads from URL path
+const urlLanguageDetector = {
+  name: 'urlPath',
+  lookup() {
+    const path = window.location.pathname;
+    const langMatch = path.match(/^\/([a-z]{2})(\/|$)/);
+    if (langMatch && ['ua', 'ru'].includes(langMatch[1])) {
+      return langMatch[1];
+    }
+    return null;
+  },
+  cacheUserLanguage() {
+    // We don't need to cache since URL is the source of truth
+  }
+};
 
 i18n
-  .use(LanguageDetector)       // enable read/write to localStorage
-  .use(initReactI18next)       // hook into React
+  .use({
+    type: 'languageDetector',
+    async: false,
+    detect: urlLanguageDetector.lookup,
+    init() {},
+    cacheUserLanguage() {}
+  })
+  .use(initReactI18next)
   .init({
     resources,
-    lng: savedLng,             // ← load localStorage language immediately
-    fallbackLng: 'ua',         // if savedLng is invalid
+    lng: urlLanguageDetector.lookup() || 'ua', // default to Ukrainian
+    fallbackLng: 'ua',
     supportedLngs: ['ua','ru'],
 
-    detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
-    },
-
-    debug: true,
+    debug: false, // Set to false in production
     interpolation: { escapeValue: false },
 
     // turn off suspense so we don't render fallback content

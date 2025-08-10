@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import ConsultModal from './../modals/consulte.jsx';
+import { useLanguagePrefix } from '../../hooks/useLanguagePrefix';
 import blog_1 from '../../assets/blog_1.jpeg'
 import blog_2 from '../../assets/blog_2.jpg'
 import blog_3 from '../../assets/blog_3.jpg'
@@ -30,6 +31,7 @@ const placeholders = [
 
 const UsefulInfo = () => {
   const { t } = useTranslation();
+  const { getLocalizedPath } = useLanguagePrefix();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -145,7 +147,7 @@ const UsefulInfo = () => {
           {/* Featured Blog 1 - Extra Large */}
           <div className="mb-8 sm:mb-12 lg:mb-16">
             <div className="overflow-hidden">
-              <Link to="/usefullInfo/1" className="group">
+              <Link to={getLocalizedPath('usefullInfo/1')} className="group">
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center bg-gradient-to-r from-teal-50 to-teal-100 rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg lg:shadow-xl overflow-hidden transition-all duration-500 transform hover:-translate-y-1 hover:shadow-2xl">
                   <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden">
                     <img 
@@ -359,7 +361,7 @@ const UsefulInfo = () => {
             {/* Blog 6 - Large Layout like Blog 1 but with image on right */}
             <div className="mb-8 sm:mb-12 lg:mb-16">
             <div className="overflow-hidden">
-                <Link to="/usefullInfo/6" className="group">
+                <Link to={getLocalizedPath('usefullInfo/6')} className="group">
                 <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center bg-gradient-to-r from-teal-50 to-teal-100 rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg lg:shadow-xl overflow-hidden transition-all duration-500 transform hover:-translate-y-1 hover:shadow-2xl">
                     <div className="relative h-56 sm:h-64 md:h-72 lg:h-96 overflow-hidden md:order-2">
                     <img 

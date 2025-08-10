@@ -1,30 +1,26 @@
 // src/components/LanguageSwitcher/LanguageSwitcher.jsx
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isHovered, setIsHovered] = useState(false);
 
-  // On mount, ensure language is set (default UA)
-  useEffect(() => {
-    const storedLang = localStorage.getItem('i18nextLng');
-    if (!storedLang) {
-      // No language saved yet: default to Ukrainian
-      localStorage.setItem('i18nextLng', 'ua');
-      i18n.changeLanguage('ua');
-    } else if (i18n.language !== storedLang) {
-      // Use stored language
-      i18n.changeLanguage(storedLang);
-    }
-  }, [i18n]);
-
-  const currentLang = (i18n.language || 'ua').substring(0, 2);
+  const currentLang = i18n.language || 'ua';
 
   const changeLanguage = (lang) => {
     if (lang === currentLang) return;
-    i18n.changeLanguage(lang);
-    localStorage.setItem('i18nextLng', lang);
+    
+    // Get current path without language prefix
+    const currentPath = location.pathname;
+    const pathWithoutLang = currentPath.replace(/^\/[a-z]{2}/, '') || '';
+    
+    // Navigate to new language path
+    const newPath = `/${lang}${pathWithoutLang}`;
+    navigate(newPath);
   };
 
   return (
