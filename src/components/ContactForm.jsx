@@ -12,9 +12,15 @@ const telegramService = {
   sendMessage: async (firstName, lastName, phone, message) => {
     try {
       const botToken = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
+      const chatId = process.env.REACT_APP_TELEGRAM_CHAT_ID;
+      
+      // Check if environment variables are configured
+      if (!botToken || !chatId || botToken === 'YOUR_BOT_TOKEN_HERE' || chatId === 'YOUR_CHAT_ID_HERE') {
+        throw new Error('Telegram configuration not set. Please configure REACT_APP_TELEGRAM_BOT_TOKEN and REACT_APP_TELEGRAM_CHAT_ID in your .env file.');
+      }
       
       const text = `
-      Новое сообщение с формы контактов (не краткий):
+      Новое сообщение с формы контактов:
       - Имя : ${firstName}
       - Фамилия : ${lastName}
       - Телефон : ${phone}
@@ -24,7 +30,7 @@ const telegramService = {
       const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
       const formData = {
-        chat_id: process.env.REACT_APP_TELEGRAM_CHAT_ID,
+        chat_id: chatId,
         text: text
       };
       
