@@ -2,6 +2,10 @@
     RewriteEngine On
     RewriteBase /
     
+    # Handle duplicate language URLs
+    RewriteRule ^ru/ru/?$ /ru [R=301,L]
+    RewriteRule ^ua/ua/?$ /ua [R=301,L]
+    
     # Handle React Router - serve index.html for all routes
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d

@@ -69,6 +69,10 @@ function App() {
           {/* Redirect root to default language */}
           <Route path="/" element={<Navigate to="/ua" replace />} />
           
+          {/* Handle duplicate language URLs (e.g., /ru/ru -> /ru) */}
+          <Route path="/ru/ru" element={<Navigate to="/ru" replace />} />
+          <Route path="/ua/ua" element={<Navigate to="/ua" replace />} />
+          
           {/* Language-based routes with enhanced SEO handling */}
           <Route path="/:lang/*" element={
             <LanguageWrapper>
@@ -92,6 +96,8 @@ function App() {
                 <Route path="consultations" element={<Consultations />} />
                 <Route path="privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="terms-conditions" element={<TermsConditions />} />
+                <Route path="ru" element={<Navigate to="/ru" replace />} />
+                <Route path="ua" element={<Navigate to="/ua" replace />} />
               </Routes>
               <Footer />
             </LanguageWrapper>

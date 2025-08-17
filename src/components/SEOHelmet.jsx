@@ -673,7 +673,7 @@ export const SEOHelmet = ({
       <link rel="prefetch" href={alternateUrls[currentLang === 'ua' ? 'ru' : 'ua']} />
       
       {/* Rich Snippets Support */}
-      <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+      <meta name="google-site-verification" content="dk7KMCMV8YH_IhlKnQ5eHHAXjG-W8wl5by57dkDakFw" />
       <meta name="yandex-verification" content="YOUR_YANDEX_VERIFICATION_CODE" />
       <meta name="bing-site-verification" content="YOUR_BING_VERIFICATION_CODE" />
       <meta name="facebook-domain-verification" content="YOUR_FACEBOOK_VERIFICATION_CODE" />

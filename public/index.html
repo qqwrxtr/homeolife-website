@@ -75,6 +75,43 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="S7zcN5Nj8VGfJsYdqcQY1xlV6GUoMWGKzbMsOD2maDA" />
+    
     <!-- 
     ================================================================
     🎯 PERFECT MULTILINGUAL SEO SOLUTION 
@@ -122,24 +159,35 @@
     <!-- React app mounting point -->
     <div id="root"></div>
     
+    <!-- AOS (Animate On Scroll) JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                offset: 100
+            });
+        });
+    </script>
+    
     <!-- Critical script for language detection and redirect -->
     <script>
         // Detect language and redirect if needed (before React loads)
         (function() {
             const path = window.location.pathname;
-            const hasLangPrefix = /^\/[a-z]{2}\//.test(path);
             
-            if (!hasLangPrefix && path !== '/') {
+            // Only redirect from root path, let React handle everything else
+            if (path === '/' || path === '') {
                 // Get browser language preference
                 const browserLang = navigator.language || navigator.userLanguage;
                 const isRussian = browserLang.toLowerCase().includes('ru');
                 const defaultLang = isRussian ? 'ru' : 'ua';
                 
-                // Redirect to language-specific URL
-                window.location.replace(`/${defaultLang}${path}`);
-            } else if (path === '/' || path === '') {
-                // Redirect root to Ukrainian (default)
-                window.location.replace('/ua/');
+                // Redirect root to default language
+                window.location.replace(`/${defaultLang}`);
             }
         })();
     </script>
