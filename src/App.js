@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Pages/Home';
 import ScrollToTop from './components/ScrollToTop';
+import LanguageDetector from './components/LanguageDetector';
 import './i18n';
 
 // Import your page components
@@ -27,15 +28,31 @@ import Blog_8 from './components/Pages/Blogs/Blog_8';
 import Blog_9 from './components/Pages/Blogs/Blog_9';
 import Blog_10 from './components/Pages/Blogs/Blog_10';
 
-// Component to handle language setting based on URL
+// Enhanced Component to handle language setting and SEO
 const LanguageWrapper = ({ children }) => {
   const { lang } = useParams();
   const { i18n } = useTranslation();
   const location = useLocation();
 
   useEffect(() => {
-    if (lang && ['ua', 'ru'].includes(lang) && i18n.language !== lang) {
-      i18n.changeLanguage(lang);
+    // Ensure language is set correctly for SEO
+    if (lang && ['ua', 'ru'].includes(lang)) {
+      if (i18n.language !== lang) {
+        i18n.changeLanguage(lang);
+      }
+      
+      // Update document attributes for SEO
+      document.documentElement.lang = lang === 'ua' ? 'uk' : 'ru';
+      document.documentElement.setAttribute('dir', 'ltr');
+      
+      // Update meta tag for language
+      let langMeta = document.querySelector('meta[name="language"]');
+      if (!langMeta) {
+        langMeta = document.createElement('meta');
+        langMeta.name = 'language';
+        document.head.appendChild(langMeta);
+      }
+      langMeta.content = lang === 'ua' ? 'Ukrainian' : 'Russian';
     }
   }, [lang, i18n, location.pathname]);
 
@@ -46,12 +63,13 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <LanguageDetector />
       <div className="App">
         <Routes>
           {/* Redirect root to default language */}
           <Route path="/" element={<Navigate to="/ua" replace />} />
           
-          {/* Language-based routes */}
+          {/* Language-based routes with enhanced SEO handling */}
           <Route path="/:lang/*" element={
             <LanguageWrapper>
               <Header />
@@ -79,7 +97,7 @@ function App() {
             </LanguageWrapper>
           } />
           
-          {/* Fallback for invalid routes */}
+          {/* Fallback for invalid routes - redirect to Ukrainian */}
           <Route path="*" element={<Navigate to="/ua" replace />} />
         </Routes>
       </div>

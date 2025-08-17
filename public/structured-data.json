@@ -1,0 +1,309 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalBusiness",
+      "@id": "https://homeolife.com.ua/#organization",
+      "name": "HomeoLife Ukraine",
+      "legalName": "HomeoLife - Професійна класична гомеопатія",
+      "url": "https://homeolife.com.ua",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://homeolife.com.ua/logo.jpg",
+        "width": 400,
+        "height": 400
+      },
+      "image": "https://homeolife.com.ua/logo.jpg",
+      "description": "Професійна класична гомеопатія в Україні. Консультації досвідченого сертифікованого гомеопата з індивідуальним підходом до кожного пацієнта.",
+      "telephone": "+380996668866",
+      "email": "anna.korkach.homeopath@gmail.com",
+      "foundingDate": "2014",
+      "currenciesAccepted": "UAH",
+      "paymentAccepted": ["Готівка", "Банківська картка", "Переказ"],
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "UA",
+        "addressRegion": "Ukraine",
+        "addressLocality": "Київ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "50.4501",
+        "longitude": "30.5234"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Україна"
+        },
+        {
+          "@type": "City",
+          "name": "Київ"
+        }
+      ],
+      "medicalSpecialty": [
+        "Класична гомеопатія",
+        "Альтернативна медицина",
+        "Холістичне лікування",
+        "Дитяча гомеопатія",
+        "Жіноче здоров'я"
+      ],
+      "availableLanguage": [
+        "Ukrainian",
+        "Russian"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/dr_anna_korkach/",
+        "https://t.me/annetta00000",
+        "https://www.facebook.com/homeolife.ukraine",
+        "https://www.youtube.com/@homeolife",
+        "https://www.linkedin.com/in/anna-korkach-homeopath"
+      ],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://homeolife.com.ua/#person",
+        "name": "Анна Коркач",
+        "givenName": "Анна",
+        "familyName": "Коркач",
+        "jobTitle": "Сертифікований гомеопат",
+        "description": "Професійний гомеопат з 10-річним досвідом роботи в класичній гомеопатії, випускник Міжнародної школи класичної гомеопатії",
+        "knowsAbout": [
+          "Класична гомеопатія",
+          "Дитяча гомеопатія", 
+          "Жіноче здоров'я",
+          "Хронічні захворювання",
+          "Імунна система",
+          "Психосоматика"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Міжнародна школа класичної гомеопатії"
+        },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Сертифікат гомеопата",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "Українська асоціація гомеопатів"
+            }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Диплом з медицини",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "Міністерство охорони здоров'я України"
+            }
+          }
+        ],
+        "memberOf": [
+          {
+            "@type": "Organization",
+            "name": "Українська асоціація гомеопатів"
+          },
+          {
+            "@type": "Organization",
+            "name": "Міжнародна асоціація класичних гомеопатів"
+          }
+        ],
+        "worksFor": {
+          "@id": "https://homeolife.com.ua/#organization"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Гомеопатичні консультації та послуги",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "@id": "https://homeolife.com.ua/#offer-initial",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Первинна консультація гомеопата",
+              "description": "Детальна індивідуальна консультація з повним аналізом стану здоров'я та призначенням гомеопатичного лікування",
+              "procedureType": "Діагностика та лікування",
+              "preparation": "Підготовка списку симптомів",
+              "followup": "Контрольний огляд через 4-6 тижнів",
+              "bodyLocation": "Весь організм",
+              "howPerformed": "Індивідуальний підбір препаратів"
+            },
+            "price": "1500",
+            "priceCurrency": "UAH",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-08-17",
+            "priceValidUntil": "2025-12-31",
+            "category": "Medical Consultation"
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://homeolife.com.ua/#offer-followup", 
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Повторна консультація",
+              "description": "Контрольний огляд та корекція лікування",
+              "procedureType": "Моніторинг лікування"
+            },
+            "price": "800",
+            "priceCurrency": "UAH",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://homeolife.com.ua/#offer-pediatric",
+            "itemOffered": {
+              "@type": "MedicalProcedure", 
+              "name": "Дитяча гомеопатія",
+              "description": "Спеціалізована консультація для дітей віком від 0 до 18 років",
+              "procedureType": "Педіатричне лікування",
+              "audience": {
+                "@type": "PeopleAudience",
+                "requiredMinAge": 0,
+                "requiredMaxAge": 18
+              }
+            },
+            "price": "1200",
+            "priceCurrency": "UAH",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "@id": "https://homeolife.com.ua/#offer-online",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Онлайн консультація",
+              "description": "Дистанційна консультація через відео-зв'язок",
+              "procedureType": "Телемедицина"
+            },
+            "price": "1300",
+            "priceCurrency": "UAH",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "156",
+        "bestRating": "5",
+        "worstRating": "4"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Марія К."
+          },
+          "reviewBody": "Чудовий спеціаліст! Анна Олександрівна допомогла вилікувати хронічну втому, яка мучила мене роками.",
+          "datePublished": "2025-08-15"
+        },
+        {
+          "@type": "Review", 
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Ігор В."
+          },
+          "reviewBody": "Професійний підхід, індивідуальне лікування. Рекомендую всім, хто шукає альтернативу традиційній медицині.",
+          "datePublished": "2025-08-10"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday", 
+          "opens": "10:00",
+          "closes": "16:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+380996668866",
+          "contactType": "Запис на консультацію",
+          "availableLanguage": ["Ukrainian", "Russian"],
+          "serviceArea": "Ukraine",
+          "hoursAvailable": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            }
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "anna.korkach.homeopath@gmail.com",
+          "contactType": "Загальні питання",
+          "availableLanguage": ["Ukrainian", "Russian", "English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "url": "https://www.instagram.com/dr_anna_korkach/",
+          "contactType": "Соціальні мережі"
+        },
+        {
+          "@type": "ContactPoint",
+          "url": "https://t.me/annetta00000",
+          "contactType": "Месенджер"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Мова обслуговування",
+          "value": "Українська, Російська"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Тип практики",
+          "value": "Класична гомеопатія"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Онлайн консультації",
+          "value": "Доступні"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Вікова категорія",
+          "value": "Дорослі та діти"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://homeolife.com.ua/#website",
+      "url": "https://homeolife.com.ua",
+      "name": "HomeoLife Ukraine",
+      "description": "Професійна класична гомеопатія в Україні",
+      "publisher": {
+        "@id": "https://homeolife.com.ua/#organization"
+      },
+      "inLanguage": ["uk-UA", "ru-RU"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://homeolife.com.ua/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}

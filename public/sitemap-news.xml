@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Ukrainian News Articles -->
+  <url>
+    <loc>https://homeolife.com.ua/ua/usefullInfo/1</loc>
+    <news:news>
+      <news:publication>
+        <news:name>HomeoLife Ukraine</news:name>
+        <news:language>uk</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-17</news:publication_date>
+      <news:title>Основи класичної гомеопатії: принципи та методи лікування</news:title>
+      <news:keywords>гомеопатія, класична гомеопатія, природне лікування, альтернативна медицина</news:keywords>
+    </news:news>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/1" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/1" />
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ua/usefullInfo/2</loc>
+    <news:news>
+      <news:publication>
+        <news:name>HomeoLife Ukraine</news:name>
+        <news:language>uk</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-16</news:publication_date>
+      <news:title>Гомеопатія для дітей: безпечні методи лікування</news:title>
+      <news:keywords>дитяча гомеопатія, педіатрія, безпечне лікування, дитяче здоров'я</news:keywords>
+    </news:news>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/2" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/2" />
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ua/usefullInfo/3</loc>
+    <news:news>
+      <news:publication>
+        <news:name>HomeoLife Ukraine</news:name>
+        <news:language>uk</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-15</news:publication_date>
+      <news:title>Жіноче здоров'я: гомеопатичний підхід до лікування</news:title>
+      <news:keywords>жіноче здоров'я, гінекологія, гормональний баланс, менопауза</news:keywords>
+    </news:news>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/3" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/3" />
+  </url>
+
+  <!-- Russian News Articles -->
+  <url>
+    <loc>https://homeolife.com.ua/ru/usefullInfo/1</loc>
+    <news:news>
+      <news:publication>
+        <news:name>HomeoLife Ukraine</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-17</news:publication_date>
+      <news:title>Основы классической гомеопатии: принципы и методы лечения</news:title>
+      <news:keywords>гомеопатия, классическая гомеопатия, натуральное лечение, альтернативная медицина</news:keywords>
+    </news:news>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/1" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/1" />
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ru/usefullInfo/2</loc>
+    <news:news>
+      <news:publication>
+        <news:name>HomeoLife Ukraine</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-16</news:publication_date>
+      <news:title>Гомеопатия для детей: безопасные методы лечения</news:title>
+      <news:keywords>детская гомеопатия, педиатрия, безопасное лечение, детское здоровье</news:keywords>
+    </news:news>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/2" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/2" />
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ru/usefullInfo/3</loc>
+    <news:news>
+      <news:publication>
+        <news:name>HomeoLife Ukraine</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-15</news:publication_date>
+      <news:title>Женское здоровье: гомеопатический подход к лечению</news:title>
+      <news:keywords>женское здоровье, гинекология, гормональный баланс, менопауза</news:keywords>
+    </news:news>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/3" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/3" />
+  </url>
+
+</urlset>

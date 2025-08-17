@@ -1,301 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Homepage - Ukrainian -->
+  <!-- Homepage - Ukrainian (Default) -->
   <url>
     <loc>https://homeolife.com.ua/ua/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/" />
     <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/" />
+    <image:image>
+      <image:loc>https://homeolife.com.ua/logo.jpg</image:loc>
+      <image:title>HomeoLife - Класична гомеопатія</image:title>
+      <image:caption>Професійна гомеопатична консультація в Україні</image:caption>
+    </image:image>
   </url>
 
   <!-- Homepage - Russian -->
   <url>
     <loc>https://homeolife.com.ua/ru/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/" />
     <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/" />
+    <image:image>
+      <image:loc>https://homeolife.com.ua/logo.jpg</image:loc>
+      <image:title>HomeoLife - Классическая гомеопатия</image:title>
+      <image:caption>Профессиональная гомеопатическая консультация в Украине</image:caption>
+    </image:image>
   </url>
 
-  <!-- Main Pages - Ukrainian -->
-  <url>
-    <loc>https://homeolife.com.ua/ua/my-approach</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/my-approach" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/my-approach" />
-  </url>
-
-  <!-- Main Pages - Russian -->
-  <url>
-    <loc>https://homeolife.com.ua/ru/my-approach</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/my-approach" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/my-approach" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ua/what-is-homeopathy</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/what-is-homeopathy" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/what-is-homeopathy" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ru/what-is-homeopathy</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/what-is-homeopathy" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/what-is-homeopathy" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ua/howIwork</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/howIwork" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/howIwork" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ru/howIwork</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/howIwork" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/howIwork" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ua/usefullInfo</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ru/usefullInfo</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo" />
-  </url>
-
+  <!-- Consultations Page - Ukrainian -->
   <url>
     <loc>https://homeolife.com.ua/ua/consultations</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/consultations" />
     <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/consultations" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/consultations" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/consultations" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/consultations" />
   </url>
 
+  <!-- My Approach Page - Ukrainian -->
   <url>
-    <loc>https://homeolife.com.ua/ru/consultations</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/consultations" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/consultations" />
+    <loc>https://homeolife.com.ua/ua/my-approach</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/my-approach" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/my-approach" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/my-approach" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/my-approach" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/my-approach" />
   </url>
 
-  <!-- Blog Posts - Ukrainian -->
+  <!-- My Approach Page - Russian -->
+  <url>
+    <loc>https://homeolife.com.ua/ru/my-approach</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/my-approach" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/my-approach" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/my-approach" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/my-approach" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/my-approach" />
+  </url>
+
+  <!-- What is Homeopathy Page - Ukrainian -->
+  <url>
+    <loc>https://homeolife.com.ua/ua/what-is-homeopathy</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/what-is-homeopathy" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/what-is-homeopathy" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/what-is-homeopathy" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/what-is-homeopathy" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/what-is-homeopathy" />
+  </url>
+
+  <!-- What is Homeopathy Page - Russian -->
+  <url>
+    <loc>https://homeolife.com.ua/ru/what-is-homeopathy</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/what-is-homeopathy" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/what-is-homeopathy" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/what-is-homeopathy" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/what-is-homeopathy" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/what-is-homeopathy" />
+  </url>
+
+  <!-- How I Work Page - Ukrainian -->
+  <url>
+    <loc>https://homeolife.com.ua/ua/howIwork</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/howIwork" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/howIwork" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/howIwork" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/howIwork" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/howIwork" />
+  </url>
+
+  <!-- How I Work Page - Russian -->
+  <url>
+    <loc>https://homeolife.com.ua/ru/howIwork</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/howIwork" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/howIwork" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/howIwork" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/howIwork" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/howIwork" />
+  </url>
+
+  <!-- Useful Info Page - Ukrainian -->
+  <url>
+    <loc>https://homeolife.com.ua/ua/usefullInfo</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/usefullInfo" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/usefullInfo" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/usefullInfo" />
+  </url>
+
+  <!-- Useful Info Page - Russian -->
+  <url>
+    <loc>https://homeolife.com.ua/ru/usefullInfo</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo" />
+    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/usefullInfo" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/usefullInfo" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/usefullInfo" />
+  </url>
+
+  <!-- Blog Posts - Ukrainian (High Priority Content) -->
   <url>
     <loc>https://homeolife.com.ua/ua/usefullInfo/1</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/1" />
     <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/1" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/usefullInfo/1" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/usefullInfo/1" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/usefullInfo/1" />
   </url>
 
   <!-- Blog Posts - Russian -->
   <url>
     <loc>https://homeolife.com.ua/ru/usefullInfo/1</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/1" />
     <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/1" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/usefullInfo/1" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/usefullInfo/1" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/usefullInfo/1" />
   </url>
 
-  <!-- Additional blog posts 2-10 in both languages -->
+  <!-- Additional blog posts 2-10 in both languages with same structure -->
   <url>
     <loc>https://homeolife.com.ua/ua/usefullInfo/2</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/2" />
     <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/2" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/usefullInfo/2" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/usefullInfo/2" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/usefullInfo/2" />
   </url>
 
   <url>
     <loc>https://homeolife.com.ua/ru/usefullInfo/2</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/2" />
     <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/2" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/usefullInfo/2" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/usefullInfo/2" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/usefullInfo/2" />
   </url>
 
-  <url>
-    <loc>https://homeolife.com.ua/ua/usefullInfo/3</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/3" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/3" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ru/usefullInfo/3</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/3" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/3" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ua/usefullInfo/4</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/4" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/4" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ru/usefullInfo/4</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/4" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/4" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ua/usefullInfo/5</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/5" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/5" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ru/usefullInfo/5</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/5" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/5" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ua/usefullInfo/6</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/6" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/6" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ru/usefullInfo/6</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/6" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/6" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ua/usefullInfo/7</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/7" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/7" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ru/usefullInfo/7</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/7" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/7" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ua/usefullInfo/8</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/8" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/8" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ru/usefullInfo/8</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/8" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/8" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ua/usefullInfo/9</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/9" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/9" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ru/usefullInfo/9</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/9" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/9" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ua/usefullInfo/10</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/10" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/10" />
-  </url>
-
-  <url>
-    <loc>https://homeolife.com.ua/ru/usefullInfo/10</loc>
-    <lastmod>2025-08-10</lastmod>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/10" />
-    <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/usefullInfo/10" />
-  </url>
-
-  <!-- Legal Pages - Ukrainian -->
+  <!-- Privacy Policy and Terms - Ukrainian -->
   <url>
     <loc>https://homeolife.com.ua/ua/privacy-policy</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/privacy-policy" />
     <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/privacy-policy" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/privacy-policy" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/privacy-policy" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/privacy-policy" />
   </url>
 
-  <!-- Legal Pages - Russian -->
   <url>
     <loc>https://homeolife.com.ua/ru/privacy-policy</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/privacy-policy" />
     <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/privacy-policy" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/privacy-policy" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/privacy-policy" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/privacy-policy" />
   </url>
 
   <url>
     <loc>https://homeolife.com.ua/ua/terms-conditions</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/terms-conditions" />
     <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/terms-conditions" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/terms-conditions" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/terms-conditions" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/terms-conditions" />
   </url>
 
   <url>
     <loc>https://homeolife.com.ua/ru/terms-conditions</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/terms-conditions" />
     <xhtml:link rel="alternate" hrefLang="uk" href="https://homeolife.com.ua/ua/terms-conditions" />
+    <xhtml:link rel="alternate" hrefLang="ru-UA" href="https://homeolife.com.ua/ru/terms-conditions" />
+    <xhtml:link rel="alternate" hrefLang="uk-UA" href="https://homeolife.com.ua/ua/terms-conditions" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/terms-conditions" />
   </url>
 
 </urlset>

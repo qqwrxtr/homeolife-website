@@ -1,0 +1,67 @@
+Security.txt for HomeoLife Ukraine
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:security@homeolife.com.ua
+Contact: mailto:anna.korkach.homeopath@gmail.com
+Encryption: https://homeolife.com.ua/.well-known/pgp-key.txt
+Acknowledgments: https://homeolife.com.ua/security/hall-of-fame
+Preferred-Languages: uk, ru, en
+Canonical: https://homeolife.com.ua/.well-known/security.txt
+Policy: https://homeolife.com.ua/security/policy
+Hiring: https://homeolife.com.ua/careers
+
+# Security Policy for HomeoLife Ukraine Medical Website
+
+## Scope
+This security policy covers:
+- Main website: homeolife.com.ua
+- All subdomains
+- Patient data systems
+- Medical consultation platforms
+- Payment processing systems
+
+## Priority Issues
+1. Patient data exposure
+2. Medical record breaches
+3. Payment system vulnerabilities
+4. Authentication bypasses
+5. Session management flaws
+
+## Reporting Guidelines
+- Response time: 48 hours maximum
+- Severity assessment within 72 hours
+- Fix deployment: Critical issues within 7 days
+- Disclosure timeline: 90 days coordinated disclosure
+
+## Rewards
+We recognize security researchers who help us maintain patient safety:
+- Critical vulnerabilities: Recognition + Thank you letter
+- High severity: Hall of Fame listing
+- Medium/Low: Security acknowledgment
+
+## Out of Scope
+- Social engineering attacks
+- Physical attacks
+- DoS/DDoS attacks
+- Spam or phishing
+- Issues requiring unusual user interaction
+
+## Legal Safe Harbor
+We commit to:
+- Not pursue legal action for good faith security research
+- Work with researchers to understand and fix issues
+- Recognize contributions publicly (with permission)
+
+## Medical Data Protection
+Special consideration for:
+- HIPAA-equivalent protections
+- GDPR compliance for EU patients
+- Ukrainian medical data regulations
+- Patient confidentiality requirements
+
+Expires: 2025-12-31T23:59:59.000Z
+
+-----BEGIN PGP SIGNATURE-----
+[PGP Signature would go here in real implementation]
+-----END PGP SIGNATURE-----

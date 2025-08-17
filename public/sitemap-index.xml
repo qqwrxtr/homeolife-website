@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Main sitemap -->
+  <sitemap>
+    <loc>https://homeolife.com.ua/sitemap.xml</loc>
+    <lastmod>2025-08-17T12:00:00+02:00</lastmod>
+  </sitemap>
+  
+  <!-- Image sitemap -->
+  <sitemap>
+    <loc>https://homeolife.com.ua/sitemap-images.xml</loc>
+    <lastmod>2025-08-17T12:00:00+02:00</lastmod>
+  </sitemap>
+  
+  <!-- News sitemap -->
+  <sitemap>
+    <loc>https://homeolife.com.ua/sitemap-news.xml</loc>
+    <lastmod>2025-08-17T12:00:00+02:00</lastmod>
+  </sitemap>
+  
+  <!-- Language-specific sitemaps -->
+  <sitemap>
+    <loc>https://homeolife.com.ua/sitemap-ua.xml</loc>
+    <lastmod>2025-08-17T12:00:00+02:00</lastmod>
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://homeolife.com.ua/sitemap-ru.xml</loc>
+    <lastmod>2025-08-17T12:00:00+02:00</lastmod>
+  </sitemap>
+
+</sitemapindex>

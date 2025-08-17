@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage Images -->
+  <url>
+    <loc>https://homeolife.com.ua/ua/</loc>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/logo.jpg</image:loc>
+      <image:title>HomeoLife - Класична гомеопатія в Україні</image:title>
+      <image:caption>Логотип HomeoLife - професійна гомеопатична клініка</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/assets/hero.mp4</image:loc>
+      <image:title>Відео презентація HomeoLife</image:title>
+      <image:caption>Професійне відео про гомеопатичні послуги</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/assets/hanemannPortrait.png</image:loc>
+      <image:title>Портрет Самуеля Ганемана</image:title>
+      <image:caption>Засновник гомеопатії - Самуель Ганеман</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Doctor Images -->
+  <url>
+    <loc>https://homeolife.com.ua/ua/about</loc>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/assets/doc1.jpg</image:loc>
+      <image:title>Анна Коркач - Сертифікований гомеопат</image:title>
+      <image:caption>Професійне фото доктора Анни Коркач</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/assets/doc2.jpg</image:loc>
+      <image:title>Консультація гомеопата</image:title>
+      <image:caption>Процес консультації з гомеопатом</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog Post Images -->
+  <url>
+    <loc>https://homeolife.com.ua/ua/usefullInfo/1</loc>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/assets/blog_1.jpeg</image:loc>
+      <image:title>Гомеопатичні препарати</image:title>
+      <image:caption>Натуральні гомеопатичні ліки та препарати</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ua/usefullInfo/2</loc>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/assets/blog_2.jpg</image:loc>
+      <image:title>Гомеопатія для дітей</image:title>
+      <image:caption>Безпечне лікування дітей гомеопатією</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ua/usefullInfo/3</loc>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/assets/blog_3.jpg</image:loc>
+      <image:title>Жіноче здоров'я та гомеопатія</image:title>
+      <image:caption>Гомеопатичне лікування жіночих захворювань</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Medical Images -->
+  <url>
+    <loc>https://homeolife.com.ua/ua/consultation</loc>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/assets/homeopathy.jpg</image:loc>
+      <image:title>Гомеопатичні гранули</image:title>
+      <image:caption>Традиційні гомеопатичні гранули для лікування</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/assets/remediesImage.jpg</image:loc>
+      <image:title>Гомеопатичні засоби</image:title>
+      <image:caption>Різноманітні гомеопатичні препарати та засоби</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Russian versions with corresponding images -->
+  <url>
+    <loc>https://homeolife.com.ua/ru/</loc>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/logo.jpg</image:loc>
+      <image:title>HomeoLife - Классическая гомеопатия в Украине</image:title>
+      <image:caption>Логотип HomeoLife - профессиональная гомеопатическая клиника</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ru/about</loc>
+    <image:image>
+      <image:loc>https://homeolife.com.ua/assets/doc1.jpg</image:loc>
+      <image:title>Анна Коркач - Сертифицированный гомеопат</image:title>
+      <image:caption>Профессиональное фото доктора Анны Коркач</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

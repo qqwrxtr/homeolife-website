@@ -1,0 +1,122 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/cache/
+Disallow: /wp-content/themes/
+Disallow: /?s=
+Disallow: /search
+Disallow: /author/
+Disallow: /users/
+Disallow: */trackback
+Disallow: */feed
+Disallow: */rss
+Disallow: */embed
+Disallow: */xmlrpc.php
+Allow: /wp-content/uploads/
+
+# Advanced SEO robots directives for HomeoLife
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+Request-rate: 1/10s
+
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /static/media/
+Allow: /images/
+Disallow: /admin/
+
+User-agent: Googlebot-News
+Allow: /ua/usefullInfo/
+Allow: /ru/usefullInfo/
+Disallow: /private/
+
+User-agent: Googlebot-Video
+Allow: /assets/hero.mp4
+Allow: /video/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 3
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: SkypeUriPreview
+Allow: /
+
+User-agent: AppleBot
+Allow: /
+
+# Social media crawlers
+User-agent: vkShare
+Allow: /
+
+User-agent: InstagramBot
+Allow: /
+
+User-agent: PinterestBot
+Allow: /
+
+# Block aggressive SEO bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 86400
+
+User-agent: MajesticSEO
+Crawl-delay: 86400
+
+User-agent: spbot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Advanced sitemap declarations
+Sitemap: https://homeolife.com.ua/sitemap-index.xml
+Sitemap: https://homeolife.com.ua/sitemap.xml
+Sitemap: https://homeolife.com.ua/sitemap-images.xml
+Sitemap: https://homeolife.com.ua/sitemap-news.xml
+Sitemap: https://homeolife.com.ua/sitemap-ua.xml
+Sitemap: https://homeolife.com.ua/sitemap-ru.xml
+
+# Clean URLs and parameter handling
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
+Clean-param: gclid&fbclid&_ga&_gl&mc_cid&mc_eid
+Clean-param: sessionid&sid&debug&preview&test
+
+# Host directive
+Host: homeolife.com.ua
+
+# Crawl optimization
+Request-rate: 1/5s
+Visit-time: 0200-0800

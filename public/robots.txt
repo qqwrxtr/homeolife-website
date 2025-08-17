@@ -1,39 +1,126 @@
+# Advanced Robots.txt for Ultimate SEO - HomeoLife Ukraine
 # https://www.robotstxt.org/robotstxt.html
+
+# Primary User-agent directives
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://homeolife.com.ua/sitemap.xml
-
-# Specific language versions for better crawling
+# Specific language versions for enhanced multilingual crawling
 Allow: /ua/
 Allow: /ru/
+Allow: /static/
+Allow: /assets/
+Allow: /_next/static/
+Allow: /images/
+Allow: /sitemap.xml
+Allow: /favicon.ico
+Allow: /.well-known/
 
-# Disallow any old paths that might exist
+# Enhanced security and optimization
 Disallow: /admin/
 Disallow: /private/
+Disallow: /api/
 Disallow: /_*
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /node_modules/
+Disallow: /build/static/js/
+Disallow: /build/static/css/
+Disallow: /*?*utm_*
+Disallow: /*?*session*
+Disallow: /*?*sid*
+Disallow: /*?*debug*
+Disallow: /search?*
 
-# Crawl-delay (optional - remove if not needed)
-# Crawl-delay: 1
-
-# Allow all major search engines
+# Major Search Engines with Enhanced Directives
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /static/
+Allow: /assets/
+Allow: /images/
+
+User-agent: Googlebot-News
+Allow: /ua/usefullInfo/
+Allow: /ru/usefullInfo/
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 3
 
 User-agent: DuckDuckBot
 Allow: /
 
 User-agent: Baiduspider
 Allow: /
+Crawl-delay: 5
 
 User-agent: YandexBot
 Allow: /
+Crawl-delay: 2
 
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Social Media and Messaging App Crawlers
+User-agent: vkShare
+Allow: /
+
+User-agent: SkypeUriPreview
+Allow: /
+
+User-agent: InstagramBot
+Allow: /
+
+# Aggressive or unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 86400
+
+User-agent: MajesticSEO
+Crawl-delay: 86400
+
+# Enhanced sitemap declarations with all advanced SEO files
+Sitemap: https://homeolife.com.ua/sitemap-index.xml
 Sitemap: https://homeolife.com.ua/sitemap.xml
+Sitemap: https://homeolife.com.ua/sitemap-images.xml
+Sitemap: https://homeolife.com.ua/sitemap-news.xml
+Sitemap: https://homeolife.com.ua/sitemap-ua.xml
+Sitemap: https://homeolife.com.ua/sitemap-ru.xml
+
+# Clean URLs directive
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
+Clean-param: gclid&fbclid&_ga&_gl
+
+# Additional directives for better crawling
+Request-rate: 1/10s
+Visit-time: 0200-0800
+
+# Host directive for canonical domain
+Host: homeolife.com.ua

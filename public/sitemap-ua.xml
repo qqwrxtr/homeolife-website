@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Ukrainian-only URLs -->
+  <url>
+    <loc>https://homeolife.com.ua/ua/</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/" />
+    <xhtml:link rel="alternate" hrefLang="x-default" href="https://homeolife.com.ua/ua/" />
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ua/about</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/about" />
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ua/consultation</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/consultation" />
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ua/contact</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/contact" />
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ua/usefullInfo</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo" />
+  </url>
+
+  <!-- Ukrainian blog posts -->
+  <url>
+    <loc>https://homeolife.com.ua/ua/usefullInfo/1</loc>
+    <lastmod>2025-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/1" />
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ua/usefullInfo/2</loc>
+    <lastmod>2025-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/2" />
+  </url>
+
+  <url>
+    <loc>https://homeolife.com.ua/ua/usefullInfo/3</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hrefLang="ru" href="https://homeolife.com.ua/ru/usefullInfo/3" />
+  </url>
+
+</urlset>

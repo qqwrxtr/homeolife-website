@@ -117,7 +117,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link 
-                  to="/my-approach" 
+                  to={getLocalizedPath('my-approach')} 
                   className="text-slate-600 hover:text-teal-600 transition-colors duration-300 text-sm"
                 >
                   {t('dropdown.myApproach')}
@@ -125,7 +125,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/what-is-homeopathy" 
+                  to={getLocalizedPath('what-is-homeopathy')} 
                   className="text-slate-600 hover:text-teal-600 transition-colors duration-300 text-sm"
                 >
                   {t('dropdown.whatIsHomeopathy')}
@@ -133,7 +133,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/howIwork" 
+                  to={getLocalizedPath('howIwork')} 
                   className="text-slate-600 hover:text-teal-600 transition-colors duration-300 text-sm"
                 >
                   {t('dropdown.howIWork')}
@@ -159,7 +159,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link 
-                  to="/" 
+                  to={getLocalizedPath('')} 
                   className="text-slate-600 hover:text-teal-600 transition-colors duration-300 text-sm"
                 >
                   {t('navigation.home')}
@@ -167,7 +167,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/consultations" 
+                  to={getLocalizedPath('consultations')} 
                   className="text-slate-600 hover:text-teal-600 transition-colors duration-300 text-sm"
                 >
                   {t('navigation.consultations')}
@@ -239,13 +239,13 @@ const Footer = () => {
           {/* Legal Links */}
           <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
             <Link 
-              to="/privacy-policy" 
+              to={getLocalizedPath('privacy-policy')} 
               className="text-sm text-slate-500 hover:text-teal-600 transition-colors duration-300"
             >
               {t('footer.privacyPolicy')}
             </Link>
             <Link 
-              to="/terms-conditions" 
+              to={getLocalizedPath('terms-conditions')} 
               className="text-sm text-slate-500 hover:text-teal-600 transition-colors duration-300"
             >
               {t('footer.termsConditions')}
